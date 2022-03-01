@@ -1,0 +1,25 @@
+.html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    position: absolute;
+    left: 500px;
+    top: 6px;
+}
+
+.inputBar {
+    width: 900px;
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px;
+    border-style: none;
+}
+
+.inputBtn {
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    border-style: none;
+    background-color: yellow;
+
+}

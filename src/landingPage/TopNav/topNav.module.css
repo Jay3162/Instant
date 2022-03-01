@@ -1,0 +1,36 @@
+.html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: grey;
+    height: 50px;
+    width: 100%;
+    
+
+}
+
+.nav-left {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+
+}
+
+.nav-right {
+    position: absolute;
+    left: 1710px;
+    top: 10px;
+}
+
+span {
+    display: inline-block;
+}
+
+.mySpan {
+    padding-right: 20px;
+}
