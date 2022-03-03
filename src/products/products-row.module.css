@@ -1,0 +1,14 @@
+row-container {
+    position: relative;
+    
+}
+
+.row {
+    position: relative;
+    border: 1px solid yellow;
+    width: 1710px;
+    height: 280px;
+    top: 400px;
+    left: 95px;
+    background-color: white;
+}

@@ -8,23 +8,24 @@
     justify-content: center;
     position: absolute;
     background-color: grey;
-    height: 50px;
+    height: 70px;
     width: 100%;
+    color: white;
     
 
 }
 
 .nav-left {
     position: absolute;
-    left: 20px;
-    top: 10px;
+    left: 40px;
+    top: 20px;
 
 }
 
 .nav-right {
     position: absolute;
-    left: 1710px;
-    top: 10px;
+    left: 1690px;
+    top: 20px;
 }
 
 span {

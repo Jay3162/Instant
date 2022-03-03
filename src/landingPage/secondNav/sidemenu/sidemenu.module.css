@@ -1,0 +1,39 @@
+:root {
+    --font-size: 23px;
+}
+
+li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 9;
+    
+
+    
+
+    
+}
+
+.dropdown svg {
+    fill: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.screen {
+    position: absolute;
+    width: 300px;
+    color: black;
+    
+    
+}
+
+
+
+.headerSize {
+    font-size: var(--font-size);
+}

@@ -1,0 +1,20 @@
+.squares-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    left: 45px;
+    top: 400px;
+
+}
+
+.square {
+    position: relative;
+    border: 1px solid yellow;
+    width: 300px;
+    height: 400px;
+    margin-left: 50px;
+    background-color: white;
+    
+    
+}
