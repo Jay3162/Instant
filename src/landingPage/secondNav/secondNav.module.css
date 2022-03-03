@@ -6,6 +6,9 @@
     background-color: rgb(185, 185, 185);
     padding: 10px;
     color: white;
+    display: flex;
+    
+    justify-content: center;
 }
 
 .spanEl {

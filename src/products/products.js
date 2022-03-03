@@ -4,7 +4,7 @@ export default function Products() {
     return (
         <div className={style["squares-container"]}>
             <div className={style["square"]}>
-                <div className={style["prod-img"]}></div>
+                <div className={style["prod-img"]}><a href='/products'>i</a></div>
             </div>
             <div className={style["square"]}>
                 <div className={style["prod-img"]}></div>

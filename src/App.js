@@ -1,12 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import LandingPage from './landingPage/landingPage'
-
+import LandingPage from './landingPage/landingPage.js'
+import { Switch, Route } from 'react-router-dom'
+import ProductPage from './productPage/productPage';
+ 
 function App() {
   return (
-    <div className="App">
-      <LandingPage/>
-    </div>
+
+    <Switch>
+      <Route path={'/'} component={ LandingPage }/>
+      <Route path={'/products'} component={ ProductPage }/>
+    </Switch>
+
   );
 }
 

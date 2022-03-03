@@ -1,0 +1,58 @@
+
+
+.middle-col {
+    position: relative;
+    left: 600px;
+    width: 800px;
+    padding: 3rem;
+    
+}
+
+.right-col {
+    position: absolute;
+    left: 1500px;
+    width: 280px;
+    
+    
+    top: 190px;
+
+}
+
+.container-1 {
+    border: 2px solid rgb(146, 146, 146);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 680px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.basket-btn{
+    border-radius: 80px;
+    background-color: yellow;
+    border-style: none;
+    width: 250px;
+    padding: 7px;
+}
+
+.basket-btn:hover {
+    filter: brightness(0.9);
+}
+
+.buy-btn{
+    border-radius: 80px;
+    background-color: orange;
+    border-style: none;
+    width: 250px;
+    padding: 7px;
+    margin-top: 10px; 
+}
+
+.buy-btn:hover {
+    filter: brightness(1.1);
+}
+
+a {
+    text-decoration: none;
+}

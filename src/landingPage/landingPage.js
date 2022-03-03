@@ -9,22 +9,17 @@ import style from './landingPage.module.css'
 
 export default function LandingPage() {
 
-
     return (
         <div className={style["container"]}>
             <TopNav/>
             <SearchBar/>,
             <SecondNav/>
-
             <Products />,
             <Products />,
             <ProductsRow />,
             <Products />,
-            <ProductsRow />,
-            
+            <ProductsRow />
         </div>
-        
-
     )
 
 }
