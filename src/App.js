@@ -7,8 +7,8 @@ function App() {
   return (
 
     <Switch>
-      <Route path={'/'} component={ LandingPage }/>
-      <Route path={'/products'} component={ ProductPage }/>
+      <Route path='/' exact component={LandingPage}/>
+      <Route path={'/products'} exact component={ProductPage}/>
     </Switch>
 
   );

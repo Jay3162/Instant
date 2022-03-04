@@ -2,8 +2,9 @@ import React from 'react'
 import SearchBar from '../searchBar/searchBar'
 import TopNav from '../landingPage/TopNav/topNav'
 import SecondNav from '../landingPage/secondNav/secondNav'
+import style from './productPage.module.css'
 
-function Product() {
+function Products() {
     return (
         <div>
             <div><img></img></div>,
@@ -51,8 +52,8 @@ function Product() {
                     <button className={style["buy-btn"]}>Buy Now</button>
                 </div>
                 <a>Secure transaction</a>
-                <p>Dispatches from <p>Instant</p></p>
-                <p>Sold by <p>Instant</p></p>
+                <p>Dispatches from Instant</p>
+                <p>Sold by Instant</p>
                 <div className={style["insurance"]}>
                     <p><b>Add Extra Protection?</b></p>
                     <a>3-year product care for £9.49</a>
