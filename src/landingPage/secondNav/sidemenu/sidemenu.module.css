@@ -12,10 +12,6 @@ li {
     position: absolute;
     z-index: 9;
     
-
-    
-
-    
 }
 
 .dropdown svg {
@@ -28,6 +24,7 @@ li {
     position: absolute;
     width: 300px;
     color: black;
+    
     
     
 }

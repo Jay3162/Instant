@@ -51,13 +51,13 @@ function Products() {
                     <button className={style["basket-btn"]}>Add to Basket</button>
                     <button className={style["buy-btn"]}>Buy Now</button>
                 </div>
-                <a>Secure transaction</a>
+                <a href="#">Secure transaction</a>
                 <p>Dispatches from Instant</p>
                 <p>Sold by Instant</p>
                 <div className={style["insurance"]}>
                     <p><b>Add Extra Protection?</b></p>
-                    <a>3-year product care for £9.49</a>
-                    <a>2-year product care for £6.39</a>
+                    <a href="#">3-year product care for £9.49</a>
+                    <a href="#">2-year product care for £6.39</a>
 
                     <p>Add gift options</p>
                     
@@ -73,10 +73,13 @@ function Products() {
 
 export default function ProductPage() {
     return (
+        <div>
         <TopNav />,
         <SearchBar />,
         <SecondNav />,
         <Products />
+        </div>
+
     )
 }
 
