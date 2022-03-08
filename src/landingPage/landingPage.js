@@ -7,8 +7,9 @@ import ProductsRow from '../products/products-row.js'
 import style from './landingPage.module.css'
 
 
-export default function LandingPage() {
 
+export default function LandingPage() {
+    
     return (
         <div className={style["container"]}>
             <TopNav/>
@@ -19,6 +20,9 @@ export default function LandingPage() {
             <ProductsRow />,
             <Products />,
             <ProductsRow />
+            
+            
+            
         </div>
     )
 

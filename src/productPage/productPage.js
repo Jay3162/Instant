@@ -4,7 +4,8 @@ import TopNav from '../landingPage/TopNav/topNav'
 import SecondNav from '../landingPage/secondNav/secondNav'
 import style from './productPage.module.css'
 
-function Products() {
+function Products(props) {
+    console.log(props.products)
     return (
         <div>
             <div><img></img></div>,

@@ -35,3 +35,15 @@ span {
 .mySpan {
     padding-right: 20px;
 }
+
+.logoImg {
+    position: absolute;
+    max-width: 200px;
+    max-height: 200px;
+    top: -90px;
+    left: 250px;
+}
+
+.logoImg:hover {
+    cursor: pointer;
+}
