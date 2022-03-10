@@ -3,34 +3,44 @@ import SearchBar from '../searchBar/searchBar'
 import TopNav from '../landingPage/TopNav/topNav'
 import SecondNav from '../landingPage/secondNav/secondNav'
 import style from './productPage.module.css'
+import Products from '../products/products'
+import { useLocation } from 'react-router-dom'
 
-function Products(props) {
-    console.log(props.products)
+
+function Product(props) {
+
+
+    const location = useLocation()
+    const Image = location.state
+    console.log(Image.sandwich)
+    console.log(Image.title)
+    console.log()
+    console.log(Image.price)
+
+
     return (
         <div>
-            <div><img></img></div>,
+            <div><img className={style["img-col"]} src={Image.sandwich}></img></div>,
         <div className={style["middle-col"]}><p>
-            Corsair K65 RGB MINI 60% Mechanical Gaming Keyboard (Customisable RGB Backlighting, CHERRY MX Red Mechanical Keyswitches, PBT Double-Shot Keycaps, AXON Hyper-Processing Technology) QWERTY, Black</p>
+            {Image.title}</p>
             <a href='#' className="store-link">Visit the Store</a>
             <div className={style["reviews"]}>
                 <div className={style["stars"]}></div>
-                <div className={style["review-num"]}>231 ratings</div>
+                <div className={style["review-num"]}>rating 291</div>
             </div>
             <hr></hr>
-            <div className={style["prices"]}>£79.99</div>
+            <div className={style["prices"]}>£{Image.price}</div>
             <div className={style["mini-description"]}>
-                <p><b>Description</b>: Gaming</p>
-                <p><b>Brand</b>: Corsair</p>
+                <p><b>Description</b>: {Image.category}</p>
                 <p><b>Style</b>: Single</p>
-                <p><b>Item dimensions LxWxH</b>: 29.4 x 10.5 x 4.4 centimetres</p>
+
             </div>
             <hr></hr>
             <div className={style["description"]}>
                 <p><b>About this item</b></p>
                 <ul>
-                    <li>Small Size, Big Features: The K65 RGB MINI delivers big features compressed into a 60% form-factor to easily fit into even the tightest spaces for comfortable gaming</li>
-                    <li>Powered by CORSAIR AXON Hyper-Processing Technology: Transmits your inputs to your PC up to 8x faster than conventional gaming keyboards with 8,000Hz hyper-polling</li>
-                    <li>100% CHERRY MX RGB Red Mechanical Keyswitches: Offer a linear travel, combined with minimal spring force, resulting in a silky smooth keypress for performance gaming</li>
+                    <li>{Image.desc}</li>
+
 
                 </ul>
                 
@@ -39,7 +49,7 @@ function Products(props) {
         </div>
         <div className={style["right-col"]}>
             <div className={style["container-1"]}>
-                <p ><b>£79.98</b></p>
+                <p ><b>£{Image.price}</b></p>
                 <p >FREE delivery <b>Tomorrow, March 4.</b> Order within 5 hrs 55 mins. Details</p>
                 <p >In stock</p>
                 <p>Quantity: <datalist>
@@ -78,7 +88,7 @@ export default function ProductPage() {
         <TopNav />,
         <SearchBar />,
         <SecondNav />,
-        <Products />
+        <Product />
         </div>
 
     )

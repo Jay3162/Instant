@@ -8,7 +8,11 @@ import style from './landingPage.module.css'
 
 
 
-export default function LandingPage() {
+
+export default function LandingPage(props) {
+
+
+
     
     return (
         <div className={style["container"]}>
