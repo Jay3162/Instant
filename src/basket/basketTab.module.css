@@ -1,0 +1,51 @@
+.layer {
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.order-title {
+    position: relative;
+    left: 200px;
+    top: -212px;
+    display: flex;
+    font-size: 20px;
+
+}
+
+.stock {
+    position: relative;
+    left: 200px;
+    top: -230px;
+    font-size: 12px;
+}
+
+.price {
+    position: relative;
+    font-size: 20px;
+    left: 1325px;
+    top: -277px;
+}
+
+.tab-row {
+    position: relative;
+    top: -210px;
+    left: 200px;
+    
+}
+
+.order-img {
+    border: 1px solid blue;
+}
+
+.styleName {
+    position: relative;
+    left: 200px;
+    top: -210px;
+}
+
+.row-el {
+    padding-right: 10px;
+}
+

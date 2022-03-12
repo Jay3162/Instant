@@ -1,0 +1,31 @@
+.order-container {
+    position: absolute;
+    top: 250px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    width: 1400px;
+    height: 300px;
+}
+
+.tab-top {
+    display: flex;
+    
+}
+
+.tab-title {
+    position: relative;
+    font-size: 25px;
+}
+
+.deselect {
+    position: relative;
+    right: 185px;
+    top: 60px;
+}
+.price-title {
+    position: relative;
+    top: 43px;
+    left: 1058px;
+}
+

@@ -20,7 +20,7 @@ export default function TopNav() {
             <div className={style["nav-right"]}>
                 <span className={style["mySpan"]}>account</span>
                 <a href="/orders" className={style["mySpan"]}>orders</a>
-                <span className={style["mySpan"]}>basket</span>
+                <Link to={'/basket'}><span className={style["mySpan"]}>basket</span></Link>
             </div>
         </div>
     )
