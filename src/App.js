@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import ProductPage from './productPage/productPage';
 import Orders from './orders/orders'
 import Basket from './basket/basket';
+import SearchPage from './search/searchPage';
  
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path={'/products'} exact component={ProductPage}/>
       <Route path={'/orders'} exact component={Orders}/>
       <Route path={'/basket'} exact component={Basket} />
+      <Route path={'/search'} exact component={SearchPage} />
     </Switch>
 
   );

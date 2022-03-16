@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TopNav from './TopNav/topNav.js'
 import SearchBar from '../searchBar/searchBar.js'
 import SecondNav from './secondNav/secondNav.js'
@@ -11,13 +11,12 @@ import style from './landingPage.module.css'
 
 export default function LandingPage(props) {
 
-
-
     
     return (
         <div className={style["container"]}>
+
             <TopNav/>
-            <SearchBar/>,
+            <SearchBar />,
             <SecondNav/>
             <Products />,
             <Products />,

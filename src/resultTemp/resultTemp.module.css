@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-opts {
+    position: relative;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.prod-left {
+    position: relative;
+
+}
+.prod-right {
+    position: relative;
+    left: 320px;
+    top: -130px;
+}
+

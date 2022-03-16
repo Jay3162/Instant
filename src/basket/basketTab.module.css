@@ -1,14 +1,21 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
 .layer {
     position: relative;
 
     align-items: center;
     justify-content: center;
+
 }
 
 .order-title {
     position: relative;
-    left: 200px;
-    top: -212px;
+    left: 220px;
+    top: -182px;
     display: flex;
     font-size: 20px;
 
@@ -16,36 +23,58 @@
 
 .stock {
     position: relative;
-    left: 200px;
-    top: -230px;
+    left: 220px;
+    top: -190px;
     font-size: 12px;
 }
 
 .price {
     position: relative;
     font-size: 20px;
-    left: 1325px;
-    top: -277px;
+    left: 1348px;
+    top: -225px;
 }
 
 .tab-row {
     position: relative;
-    top: -210px;
-    left: 200px;
+    top: -120px;
+    left: 220px;
     
 }
 
-.order-img {
-    border: 1px solid blue;
-}
+
 
 .styleName {
     position: relative;
-    left: 200px;
-    top: -210px;
+    left: 220px;
+    top: -130px;
 }
 
 .row-el {
     padding-right: 10px;
 }
+.info-tab {
+    
+    max-height: 250px;
+    
+}
 
+.checkbox {
+    position: relative;
+    top: 100px;
+}
+
+.order-img {
+    position: relative;
+    left: 30px;
+    max-height: 180px;
+    max-width: 180px;
+    min-height: 180px;
+
+
+}
+
+.total {
+    position: relative;
+    left: 1225px;
+}

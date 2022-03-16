@@ -1,11 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
 .order-container {
     position: absolute;
     top: 250px;
-    margin: 20px;
+    margin: 30px;
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     width: 1400px;
-    height: 300px;
+    height: auto;
+    
 }
 
 .tab-top {
@@ -16,16 +22,44 @@
 .tab-title {
     position: relative;
     font-size: 25px;
+    top: -20px;
+
 }
 
 .deselect {
     position: relative;
     right: 185px;
-    top: 60px;
+    top: 10px;
 }
 .price-title {
     position: relative;
-    top: 43px;
-    left: 1058px;
+    top: 10px;
+    left: 1057px;
+}
+
+
+.total {
+    position: absolute;
+    left: 1470px;
+    background-color: white;
+    max-width: 350px;
+    top: 0px;
+    padding: 20px;
+    height: 70px;
+
+}
+
+.checkout {
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px 20px;
+    border-style: none;
+    background-color: yellow;
+    left: 0px;
+    width: 350px;
+    top: 10px;
 }
 

@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sideOpts {
+    position: absolute;
+    top: 150px;
+}
+
+
+.middle {
+    position: absolute;
+    left: 500px;
+    top: 150px;
+}
+
+.mid-col-title {
+    font-size: 25px;
+}
+
+.delivery {
+    position: relative;
+    padding-bottom: 10px;
+    
+}
+
+.delivery-day {
+    position: relative;
+    padding-bottom: 10px;
+    
+}
+
+.price-range {
+    position: relative;
+    padding-bottom: 10px; 
+}
+
+.price-select {
+    position: relative;
+    
+}
+
+.bar-size {
+    position: relative;
+    width: 40px;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border: 1px solid rgb(158, 158, 158);
+}
+
+.bar-btn {
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px rgb(158, 158, 158);
+}

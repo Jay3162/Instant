@@ -24,3 +24,13 @@
     background-color: yellow;
 
 }
+
+.search-icon{
+    font-size: 10px;
+    
+}
+
+.inputBtn:hover {
+    cursor: pointer;
+    background-color: rgb(241, 241, 0);
+}

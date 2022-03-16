@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 export default function TopNav() {
 
 
-    // add redirect functionality to logo
+    
     const logoImg = new URL('./logos/instant-logos-final.png', import.meta.url)
     return (
         <div className={style["nav-container"]}>

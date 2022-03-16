@@ -12,7 +12,7 @@ export default function Sidemenu() {
             return (
                 <li >
                     
-                    <a href="#" className={style["menu"]} onClick={() => setOpen(!open)}>{props.icon}</a>
+                    <a className={style["menu"]} onClick={() => setOpen(!open)}>{props.icon}</a>
                     <span className="icon-right">{props.iconRight}</span>
                     {open && props.children}
 
@@ -26,7 +26,6 @@ export default function Sidemenu() {
             <div className={style["dropdown"]}>
                 <Dropdown icon={<CogIcon />}></Dropdown>
                 <div className={style["screen"]}>
-                    
                     <Dropdown ><p className={style["headerSize"]}><b>Trending</b></p></Dropdown>
                     <Dropdown>Best Sellers</Dropdown>
                     <Dropdown >New Releases</Dropdown>
