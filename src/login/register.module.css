@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --text-size: 15px;
+    --left-pos: 5px;
+    --title-marg-top: 30px;
+}
+
+.background {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    display: flex;
+    justify-items: center;
+    border: 1px solid rgb(192, 192, 192);
+    width: 300px;
+
+}
+
+.sign-in-title {
+    font-size: 30px;
+}
+
+.form-box {
+    
+    width: 200px;
+    height: 250px;
+}
+
+.username {
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    margin: 5px;
+ 
+}
+
+.email {
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    margin: 5px;
+}
+
+.password {
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    margin: 8px;
+    right: 1%;
+
+    
+}
+
+.btn {
+    position: relative;
+    padding: 8px 60px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: yellow;
+    left: 10%;
+    margin: 8px;
+
+}
+
+.box-pos {
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+
+.subheader{
+    position: relative;
+    font-size: var(--text-size);
+    left: var(--left-pos);
+    margin-top: var(--title-marg-top);
+}

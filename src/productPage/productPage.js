@@ -43,8 +43,10 @@ function Product(props) {
         })();
 
         basketItems.push({basketData})
+        console.log(basketItems)
         localStorage.setItem("basket", JSON.stringify(basketItems));
-        console.log(localStorage)    
+        console.log(localStorage)
+        console.log(JSON.parse(localStorage.basket))  
 
     }
 

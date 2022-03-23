@@ -7,11 +7,15 @@ li {
     margin: 0px;
     padding: 0px;
     
+    
 }
 
 .dropdown {
     position: absolute;
     z-index: 9;
+
+    
+    
     
     
 }
@@ -26,15 +30,30 @@ li {
     position: absolute;
     width: 300px;
     color: black;
+    
+    
+    
      
 }
 
 .menu {
     cursor: pointer;
+
 }
 
 
 
 .headerSize:hover {
     font-size: var(--font-size);
+}
+
+.backBox {
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    height: 860px;
+    width: 300px;
+    z-index: -3;
+    border-radius: 10px;
+    
 }

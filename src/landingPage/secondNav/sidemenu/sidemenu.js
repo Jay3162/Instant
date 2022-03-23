@@ -26,6 +26,7 @@ export default function Sidemenu() {
             <div className={style["dropdown"]}>
                 <Dropdown icon={<CogIcon />}></Dropdown>
                 <div className={style["screen"]}>
+                    {open ? <div className={style["backBox"]}></div> : <div></div>}
                     <Dropdown ><p className={style["headerSize"]}><b>Trending</b></p></Dropdown>
                     <Dropdown>Best Sellers</Dropdown>
                     <Dropdown >New Releases</Dropdown>

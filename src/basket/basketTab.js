@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import style from './basketTab.module.css'
 import {useLocation} from 'react-router-dom'
 
@@ -7,48 +7,59 @@ export default function Tab () {
     const [isChecked, setIsChecked] = useState(false)
 
     
+
+    
     const handleOnChange = (e) => {
         setIsChecked(!isChecked)
     }
     // retrieve data from localStorage and convert it from string
     const container = []
-    let data = localStorage.getItem("basket")
+    let i = 0;
+    let data = localStorage.basket
     data = JSON.parse(data)
-    console.log(localStorage)
-    console.log(localStorage.basket)
-    console.log(data[0].basketData.data.products)
-    // ensure that data exists then add it to array
-    let varProd = data[0].basketData.data.products || data[0].basketData.data.secondProduct || data[0].basketData.data.thirdProduct || data[0].basketData.data.fourthProduct || data[0].basketData.data.fifthProduct
-    console.log(varProd)
 
-    if (varProd) {
+    let count = 0
+
+    console.log(count)
+    //adds each product to the container array if it's been added to the basket
+    for (i = 0; i < data.length; i++) {
+        let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct
+
         container.push(varProd)
+        
     }
 
-    let secondProd = data[1].basketData.data.products || data[1].basketData.data.secondProduct || data[1].basketData.data.thirdProduct || data[1].basketData.data.fourthProduct || data[1].basketData.data.fifthProduct
-    if (secondProd) {
-        container.push(secondProd)
-    }
 
-    let thirdProd = data[2].basketData.data.products || data[2].basketData.data.secondProduct || data[2].basketData.data.thirdProduct || data[2].basketData.data.fourthProduct || data[2].basketData.data.fifthProduct
-    if (thirdProd) {
-        container.push(thirdProd)
-    }
-   
+  
 
-    const removeCurrItem = () => {
-        localStorage.clear()
+    // calculate the subtotal for the botton of the tab
+    for (let i = 0; i < container.length; i++) {
+        count += container[i].price
     }
+    console.log(Number((count).toFixed(2)))
+    count = Number((count).toFixed(2))
+    
 
     console.log(container)
+
+    const [basketProd, setBasketProd] = useState(container)
+    const removeCurrItem = (index) => {
+        console.log(container)
+        container.splice(index, 1)
+        console.log(container)
+        setBasketProd(container)
+        console.log(basketProd)
+    }
+
 
 
     return (
         <div>
-            {container.map((obj, index) => {
+            {basketProd.map((obj, index) => {
                 return (
                     // you changed info-tab's height
                     <div className={style["info-tab"]} key={index}>
+                        
                         <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
                         <div className={style["layers"]}>
                             <div >
@@ -61,7 +72,7 @@ export default function Tab () {
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
                                     <button className={style["quantity-btn"]}>Qty: 1</button>
-                                    <span className={style["row-el"]}><a onClick={removeCurrItem} href='#'>Delete</a></span>
+                                    <span className={style["row-el"]}><button onClick={() => removeCurrItem(index)} value={index}>Delete</button></span>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span></div>
                                     
@@ -73,11 +84,8 @@ export default function Tab () {
                       
                 )
             })}
-            {varProd ? (<div className={style["total"]}>Subtotal({container.length} items): <b>£{varProd.price}</b></div>) : (<div></div>)}
-            
-            
-
-            
+            {container ? (<div className={style["total"]}>Subtotal({container.length} items): <b>£{count}</b></div>) : (<div></div>)}
+   
         </div>
         
          

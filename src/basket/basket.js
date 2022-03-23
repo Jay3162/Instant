@@ -4,7 +4,7 @@ import SecondNav from '../landingPage/secondNav/secondNav'
 import SearchBar from '../searchBar/searchBar'
 import style from './basket.module.css'
 import Tab from './basketTab'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -18,6 +18,12 @@ export default function Basket() {
         console.log(i)
     }
     console.log(row)
+    let data = localStorage.getItem("basket")
+    data = JSON.parse(data)
+    console.log(data[0])
+    console.log(data[1])
+    console.log(data[2])
+
 
 
     return (
@@ -37,7 +43,7 @@ export default function Basket() {
                         <div><Tab /></div>
                         <div className={style["total"]}>
                             <p className={style["subtotal"]}>Subtotal (3 items): <b>£11.29</b></p>
-                            <button className={style["checkout"]}>Proceed to Checkout</button>
+                            <Link to={'/Login'}><button className={style["checkout"]}>Proceed to Checkout</button></Link>
                             </div>
                         
                         
