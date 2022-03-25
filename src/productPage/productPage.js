@@ -6,23 +6,18 @@ import style from './productPage.module.css'
 import Products from '../products/products'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
 
 
 
-function Product(props) {
+function Product() {
 
     // takes value stored in state and displays it in jsx
     const location = useLocation()
     const Image = location.state
 
-    // const firstProd = Image.products
-    // const secondProd = Image.secondProduct
-    // const thirdProd = Image.thirdProduct
-    // const fourthProd = Image.fourthProduct
-    // const fifthProd = Image.fifthProduct
+    const varProd = Image.products || Image.secondProduct || Image.thirdProduct || Image.fourthProduct || Image.fifthProduct || Image.obj
 
-    const varProd = Image.products || Image.secondProduct || Image.thirdProduct || Image.fourthProduct || Image.fifthProduct
-    console.log(varProd)
 
     const [basketData, setBasketData] = useState({data:Image})
     console.log(Image)
@@ -49,42 +44,35 @@ function Product(props) {
         console.log(JSON.parse(localStorage.basket))  
 
     }
+    let starCount = []
+    let starHolder = []
+    const bigNum = Math.floor(varProd.rating.rate)
+    for (let i = 0; i < bigNum; i++) {
+        starCount.push(<FaStar className={style["starColor"]}/>)
+    }
+    if (bigNum % 1 === 0) {
+        starCount.push(<FaStarHalfAlt className={style["starColor"]}/>)
+    }
 
     return (
-        <div>
-            {/* <div>{firstProd ? (<div><img className={style["img-col"]} src={firstProd.image}></img></div>) : (<div></div>)}</div>
-            <div>{secondProd ? (<div><img className={style["img-col"]} src={secondProd.image}></img></div>) : (<div></div>)}</div>
-            <div>{thirdProd ? (<div><img className={style["img-col"]} src={thirdProd.image}></img></div>) : (<div></div>)}</div>
-            <div>{fourthProd ? (<div><img className={style["img-col"]} src={fourthProd.image}></img></div>) : (<div></div>)}</div>
-            <div>{fifthProd ? (<div><img className={style["img-col"]} src={fifthProd.image}></img></div>) : (<div></div>)}</div> */}
+        <div className={style["leveller"]}>
+
             <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image}></img></div>) : (<div></div>)}</div>
          <div className={style["middle-col"]}>
-             {/* <div>{firstProd ? (<p>{Image.products.title}</p>) : (<div></div>)}</div>
-             <div>{secondProd ? (<p>{secondProd.title}</p>) : (<div></div>)}</div>
-             <div>{thirdProd ? (<p>{thirdProd.title}</p>) : (<div></div>)}</div>
-             <div>{fourthProd ? (<p>{fourthProd.title}</p>) : (<div></div>)}</div>
-             <div>{fifthProd ? (<p>{fifthProd.title}</p>) : (<div></div>)}</div> */}
-             <div>{varProd ? (<p>{varProd.title}</p>) : (<div></div>)}</div>
+
+             <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>
              
              <a href='#' className="store-link">Visit the Store</a>
              <div className={style["reviews"]}>
-                 <div className={style["stars"]}></div>
-                 <div className={style["review-num"]}>rating 291</div>
+                 <div className={style["stars"]}>{starCount} {varProd.rating.rate}</div>
+                 <div className={style["review-num"]}>reviews {varProd.rating.count}</div>
              </div>
              <hr></hr>
-             {/* <div>{firstProd ? (<div className={style["prices"]}>£{firstProd.price}</div>) : (<div></div>)}</div>
-             <div>{secondProd ? (<div className={style["prices"]}>£{secondProd.price}</div>) : (<div></div>)}</div>
-             <div>{thirdProd ? (<div className={style["prices"]}>£{thirdProd.price}</div>) : (<div></div>)}</div>
-             <div>{fourthProd ? (<div className={style["prices"]}>£{fourthProd.price}</div>) : (<div></div>)}</div>
-             <div>{fifthProd ? (<div className={style["prices"]}>£{fifthProd.price}</div>) : (<div></div>)}</div> */}
+
              <div>{varProd ? (<div className={style["prices"]}>£{varProd.price}</div>) : (<div></div>)}</div>
 
              <div className={style["mini-description"]}>
-                 {/* <div>{firstProd ? (<p><b>Description</b>: {firstProd.category}</p>) : (<div></div>)}</div>
-                 <div>{secondProd ? (<p><b>Description</b>: {secondProd.category}</p>) : (<div></div>)}</div>
-                 <div>{thirdProd ? (<p><b>Description</b>: {thirdProd.category}</p>) : (<div></div>)}</div>
-                 <div>{fourthProd ? (<p><b>Description</b>: {fourthProd.category}</p>) : (<div></div>)}</div>
-                 <div>{fifthProd ? (<p><b>Description</b>: {fifthProd.category}</p>) : (<div></div>)}</div> */}
+
                  <div>{varProd ? (<p><b>Description</b>: {varProd.category}</p>) : (<div></div>)}</div>
                  
                  <p><b>Style</b>: Single</p>
@@ -94,11 +82,7 @@ function Product(props) {
              <div className={style["description"]}>
                  <p><b>About this item</b></p>
                  <ul>
-                     {/* <div>{firstProd ? (<li>{Image.products.description}</li>) : (<div></div>)}</div>
-                     <div>{secondProd ? (<li>{secondProd.description}</li>) : (<div></div>)}</div>
-                     <div>{thirdProd ? (<li>{thirdProd.description}</li>) : (<div></div>)}</div>
-                     <div>{fourthProd ? (<li>{fourthProd.description}</li>) : (<div></div>)}</div>
-                     <div>{fifthProd ? (<li>{fifthProd.description}</li>) : (<div></div>)}</div> */}
+
                      <div>{varProd ? (<li>{varProd.description}</li>) : (<div></div>)}</div>
                      
 
@@ -110,11 +94,7 @@ function Product(props) {
          </div>
          <div className={style["right-col"]}>
              <div className={style["container-1"]}>
-                 {/* <div>{firstProd ? (<p><b>£{firstProd.price}</b></p>) : (<div></div>)}</div>
-                 <div>{secondProd ? (<p><b>£{secondProd.price}</b></p>) : (<div></div>)}</div>
-                 <div>{thirdProd ? (<p><b>£{thirdProd.price}</b></p>) : (<div></div>)}</div>
-                 <div>{fourthProd ? (<p><b>£{fourthProd.price}</b></p>) : (<div></div>)}</div>
-                 <div>{fifthProd ? (<p><b>£{fifthProd.price}</b></p>) : (<div></div>)}</div> */}
+
                  <div>{varProd ? (<p><b>£{varProd.price}</b></p>) : (<div></div>)}</div>
                  
                  <p >FREE delivery <b>Tomorrow, March 4.</b> Order within 5 hrs 55 mins. Details</p>
@@ -126,11 +106,7 @@ function Product(props) {
                      <option>4</option>
                      </datalist></p>
                  <div className={style["action-btns"]}>
-                     {/* {firstProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
-                     {secondProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
-                     {thirdProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
-                     {fourthProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
-                     {fifthProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)} */}
+
                      {varProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
                      
 

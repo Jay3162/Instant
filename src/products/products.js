@@ -74,24 +74,30 @@ export default function Products(props) {
 
 
             {isLoaded ? (
-                        <Link to={{ pathname: '/products', state: {products}}}><div className={style["square"]}><img src={products.image} alt="img1" className={style["prod-img"]} ></img>
-                        <div className={style["prod-img"]}></div>
+                        <Link to={{ pathname: '/products', state: {products}}}><div className={style["square"]}>
+                            
+                            <img src={products.image} alt="img1" className={style["prod-img"]} ></img>
+                            <div className={style["prod-img"]}></div>
                         </div></Link>      
             ) : (
                 <div>Loading...</div>
             )}
 
             {isLoaded ? (
-                        <Link to={{ pathname: '/products', state: {secondProduct}}}><div className={style["square"]}><img src={secondProduct.image} alt="img2" className={style["prod-img"]} ></img>
-                        <div className={style["prod-img"]}></div>
+                        <Link to={{ pathname: '/products', state: {secondProduct}}}><div className={style["square"]}>
+                            
+                            <img src={secondProduct.image} alt="img2" className={style["prod-img"]} ></img>
+                            <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
                 <div>Loading...</div>
             )}
 
             {isLoaded ? (
-                        <Link to={{ pathname: '/products', state: {thirdProduct}}}><div className={style["square"]}><img src={thirdProduct.image} alt="img1" className={style["prod-img"]} ></img>
-                        <div className={style["prod-img"]}></div>
+                        <Link to={{ pathname: '/products', state: {thirdProduct}}}><div className={style["square"]}>
+                            
+                            <img src={thirdProduct.image} alt="img1" className={style["prod-img"]} ></img>
+                            <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
                 <div>Loading...</div>

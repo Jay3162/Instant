@@ -11,18 +11,16 @@ import { Link } from 'react-router-dom'
 export default function Basket() {
 
     let row = [];
-    console.log(localStorage.length)
     // makes a new Tab for each item inside the localstorage
-    for (let i = 0; i < localStorage.length; i++) {
-        row.push(<Tab key={i} />)
-        console.log(i)
-    }
-    console.log(row)
+    console.log(localStorage.basket)
     let data = localStorage.getItem("basket")
     data = JSON.parse(data)
-    console.log(data[0])
-    console.log(data[1])
-    console.log(data[2])
+    for (let i = 0; i < data.length; i++) {
+        row.push(<Tab key={i} />)
+    }
+    if (localStorage.basket.length === 0 || localStorage.basket === undefined) {
+        row.push(<Tab key={0} />)
+    }
 
 
 

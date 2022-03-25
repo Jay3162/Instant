@@ -5,17 +5,51 @@
 
 .image-opts {
     position: relative;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    min-width: 150px;
 }
 
 .prod-left {
     position: relative;
+    padding-bottom: 20px;
 
 }
 .prod-right {
     position: relative;
-    left: 320px;
-    top: -130px;
+    left: 20px;
+    
 }
 
+.aligner {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    padding-bottom: 5px;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.title:hover {
+    color: orange;
+}
+
+.rating {
+    padding-bottom: 5px;
+}
+
+.star {
+    color: yellow;
+}
+.rate-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.starholder {
+    padding-right: 10px;
+}

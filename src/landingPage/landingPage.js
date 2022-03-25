@@ -24,8 +24,6 @@ export default function LandingPage() {
                 })
                 const content = await req.json()
                 setName(content.name)
-                console.log(content.name)
-                console.log(req.json())
             }
         )()
         
@@ -38,7 +36,7 @@ export default function LandingPage() {
             <TopNav name={name}/>
             <SearchBar />,
             <SecondNav/>
-            <Products />,
+            <Products/>,
             <Products />,
             <ProductsRow />,
             <Products />,

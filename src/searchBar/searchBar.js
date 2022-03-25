@@ -10,7 +10,8 @@ export default function SearchBar(props) {
     const [products, setProducts] = useState([])
     const SearchOnClick = () => {
         useEffect(() => {
-            const fetchProducts = async () => {
+            const fetchProducts = async (e) => {
+                e.preventDefault()
                 const data = await fetch('https://fakestoreapi.com/products')
                 const resp = await data.json()
                 setProducts(resp.products)
@@ -24,16 +25,11 @@ export default function SearchBar(props) {
                     }
                 }
             }
+            fetchProducts()
         })
 
     }
-    
 
-
-
-
-
-    
     return (
         <div className={style["container"]}>
             <form >

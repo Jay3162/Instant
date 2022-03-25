@@ -4,9 +4,13 @@ import TopNav from '../landingPage/TopNav/topNav'
 import SearchBar from '../searchBar/searchBar'
 import style from './searchPage.module.css'
 import Results from '../Results/Results'
+import { useLocation } from 'react-router-dom'
 
 
-export default function SearchPage() {
+export default function SearchPage(props) {
+    const location = useLocation()
+    const Image = location.state
+    console.log(Image)
     // names checkboxes and defines the number of checkboxes made per section
     const delivery_opts = [
         {name: "Today by 7pm"},
@@ -47,7 +51,7 @@ export default function SearchPage() {
             <TopNav/>,
             <SearchBar/>
             <SecondNav/>,
-            <div className={style["sideOpts"]}>
+            <div className={style["sideOpts"]} key="{index}">
                 <div>
                     
                 </div>
@@ -99,7 +103,7 @@ export default function SearchPage() {
             <div className={style["middle"]}>
                 <div>
                     <p className={style["mid-col-title"]}>RESULTS</p>
-                    <Results/>
+                    <Results Image={Image}/>
                 </div>
                 </div>
         </div>

@@ -18,12 +18,14 @@ export default function TopNav(props) {
             credentials: 'include'
         })
         
+        
     }
-
+    console.log(props.name)
     let account;
     let tab;
     // if the user is logged in there name will be shown on the navbar and they'll have different account related options if they hover over the account button
     if (props.name === '') {
+        
         account = (
             <a href='#' onMouseOver={() => setMouseOn(!mouseOn)}>account</a>
         )
@@ -37,8 +39,10 @@ export default function TopNav(props) {
             </div>
         )
     } else {
+        const saved = props.name
+        console.log(saved)
         account = (
-            <a href='#' onMouseOver={() => setMouseOn(!mouseOn)}>Hello, {props.name}</a>
+            <a href='#' onMouseOver={() => setMouseOn(!mouseOn)} className={style["username"]}>Hello, {saved}</a>
         )
         tab = (
             <div className={style["account-sections"]}>
@@ -53,8 +57,8 @@ export default function TopNav(props) {
     return (
         <div className={style["nav-container"]}>
             <div className={style["nav-left"]}>
-                <Link to={'/'}><span className={style["mySpan"]}><img className={style["logoImg"]} src={logoImg}></img></span></Link>
-                <span>location</span>
+                <span className={style["mySpan"]}><Link to={'/'}><img className={style["logoImg"]} src={logoImg}></img></Link></span>
+                {/* <span></span> */}
             </div>, 
             <div className={style["nav-right"]}>
                 <span className={style["mySpan"]}>

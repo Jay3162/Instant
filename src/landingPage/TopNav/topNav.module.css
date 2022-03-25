@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    background-color: grey;
+    background-color: rgba(5, 10, 32, 0.925);
     height: 70px;
     width: 100%;
     color: white;
@@ -24,7 +24,7 @@
 
 .nav-right {
     position: absolute;
-    left: 1690px;
+    left: 1490px;
     top: 20px;
 }
 
@@ -33,7 +33,9 @@ span {
 }
 
 .mySpan {
-    padding-right: 20px;
+    padding-right: 60px;
+    color: white;
+    font-weight: bold;
 }
 
 .logoImg {
@@ -87,4 +89,8 @@ span {
 .account-sections {
     display: flex;
     flex-direction: column;
+}
+
+.username {
+    color: white;
 }

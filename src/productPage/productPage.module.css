@@ -5,6 +5,7 @@
     left: 600px;
     width: 800px;
     padding: 3rem;
+    top: 30px;
     
 }
 
@@ -14,7 +15,7 @@
     width: 280px;
     
     
-    top: 190px;
+    top: 70px;
 
 }
 
@@ -60,8 +61,27 @@ a {
 .img-col {
     position: absolute;
     display: flex;
-    top: 170px;
+    top: 80px;
     width: 400px;
     height: 400px;
     left: 200px;
+
+}
+
+.leveller {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.starColor{
+    color: yellow;
+}
+
+.titleProps {
+    font-size: 24px;
+}
+
+.prices {
+    font-size: 18px;
 }

@@ -3,7 +3,7 @@
 .row-container {
     position: relative;
     top: 40px;
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(6, 19, 75);
     padding: 10px;
     color: white;
     display: flex;
@@ -13,6 +13,8 @@
 
 .spanEl {
     padding-right: 20px;
+    color: white;
+
 }
 
 .menu {

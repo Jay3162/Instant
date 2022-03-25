@@ -1,3 +1,4 @@
+import Products from './products'
 import style from './products-row.module.css'
 
 export default function ProductsRow() {

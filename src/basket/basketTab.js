@@ -13,17 +13,19 @@ export default function Tab () {
         setIsChecked(!isChecked)
     }
     // retrieve data from localStorage and convert it from string
+    
     const container = []
     let i = 0;
     let data = localStorage.basket
     data = JSON.parse(data)
 
+
     let count = 0
 
-    console.log(count)
+
     //adds each product to the container array if it's been added to the basket
     for (i = 0; i < data.length; i++) {
-        let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct
+        let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
 
         container.push(varProd)
         
@@ -36,7 +38,6 @@ export default function Tab () {
     for (let i = 0; i < container.length; i++) {
         count += container[i].price
     }
-    console.log(Number((count).toFixed(2)))
     count = Number((count).toFixed(2))
     
 
@@ -44,11 +45,14 @@ export default function Tab () {
 
     const [basketProd, setBasketProd] = useState(container)
     const removeCurrItem = (index) => {
-        console.log(container)
-        container.splice(index, 1)
-        console.log(container)
-        setBasketProd(container)
-        console.log(basketProd)
+        // container.splice(index, 1)
+        // setBasketProd(container)
+        console.log(index)
+        console.log(localStorage)
+        console.log(localStorage)
+ 
+
+
     }
 
 
@@ -58,7 +62,7 @@ export default function Tab () {
             {basketProd.map((obj, index) => {
                 return (
                     // you changed info-tab's height
-                    <div className={style["info-tab"]} key={index}>
+                    <div className={style["info-tab"]} key="{index}">
                         
                         <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
                         <div className={style["layers"]}>
