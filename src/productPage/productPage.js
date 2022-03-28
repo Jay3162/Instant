@@ -21,7 +21,12 @@ function Product() {
 
     const [basketData, setBasketData] = useState({data:Image})
     console.log(Image)
-    
+
+    console.log(varProd.price)
+    let realPrice = varProd.price
+    if (realPrice % 1 !== 0 && (realPrice + 0.01) % 2 !== 0) {
+        realPrice = realPrice + "0"
+    }
  
     let num = 0;
     const sendData = (props) => {
@@ -43,6 +48,13 @@ function Product() {
         console.log(localStorage)
         console.log(JSON.parse(localStorage.basket))  
 
+    }
+    const refresh = () => {
+        window.location.reload(false)
+    }
+    const double = () => {
+        sendData()
+        refresh()
     }
     let starCount = []
     let starHolder = []
@@ -69,7 +81,7 @@ function Product() {
              </div>
              <hr></hr>
 
-             <div>{varProd ? (<div className={style["prices"]}>£{varProd.price}</div>) : (<div></div>)}</div>
+             <div>{varProd ? (<div className={style["prices"]}>£{realPrice}</div>) : (<div></div>)}</div>
 
              <div className={style["mini-description"]}>
 
@@ -95,7 +107,7 @@ function Product() {
          <div className={style["right-col"]}>
              <div className={style["container-1"]}>
 
-                 <div>{varProd ? (<p><b>£{varProd.price}</b></p>) : (<div></div>)}</div>
+                 <div>{varProd ? (<p><b>£{realPrice}</b></p>) : (<div></div>)}</div>
                  
                  <p >FREE delivery <b>Tomorrow, March 4.</b> Order within 5 hrs 55 mins. Details</p>
                  <p >In stock</p>
@@ -107,7 +119,7 @@ function Product() {
                      </datalist></p>
                  <div className={style["action-btns"]}>
 
-                     {varProd ? (<div><button onClick={sendData} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
+                     {varProd ? (<div><button onClick={double} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
                      
 
                      <button className={style["buy-btn"]}>Buy Now</button>
@@ -136,9 +148,9 @@ function Product() {
 export default function ProductPage() {
     return (
         <div>
-        <TopNav Product1={Image.products}/>,
-        <SearchBar />,
-        <SecondNav />,
+        <TopNav Product1={Image.products}/>
+        <SearchBar />
+        <SecondNav />
         <Product />
         
         </div>

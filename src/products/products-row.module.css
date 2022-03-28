@@ -1,14 +1,18 @@
 row-container {
     position: relative;
-    
+    display: flex;
 }
 
 .row {
     position: relative;
-    border: 1px solid yellow;
-    width: 1710px;
+
+    /* width: 1350px; */
+    width: 66.3%;
     height: 280px;
-    top: 400px;
-    left: 95px;
+    top: 300px;
+    /* left: 280px; */
+    left: 17%;
     background-color: white;
+    margin-bottom: 1%;
+
 }

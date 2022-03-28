@@ -3,18 +3,21 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    left: 45px;
-    top: 400px;
+    /* left: 230px; */
+    left: 16%;
+    top: 300px;
 
 }
 
 .square {
     position: relative;
-    border: 1px solid yellow;
+
     width: 300px;
-    height: 400px;
-    margin-left: 50px;
+    height: 350px;
+    margin-left: 20px;
+    
     background-color: white;
+    margin-bottom: 5%;
     
     
 }
@@ -25,4 +28,14 @@
     width: 200px;
     left: 50px;
     top: 70px;
+}
+
+.product-headers {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    
 }

@@ -12,12 +12,13 @@ export default function Products(props) {
     const [secondProduct, setSecondProducts] = useState([])
     const [thirdProduct, setThirdProducts] = useState([])
     const [fourthProduct, setFourthProducts] = useState([])
-    const [fifthProduct, setFifthProducts] = useState([])
+
     // see if you can put all of the products into one array
     const [finalProducts, setFinalProducts] = useState([])
 
     //tells the system whether or not the api data is loaded or not
     const [isLoaded, setIsLoaded] = useState(false)
+    const [loadText, setLoadText] = useState(false)
     
     
     const fetchData = async () => {
@@ -44,10 +45,11 @@ export default function Products(props) {
                 setSecondProducts(response.data[z])
                 setThirdProducts(response.data[c])
                 setFourthProducts(response.data[v])
-                setFifthProducts(response.data[b])
+
                 
                 
                 setIsLoaded(true);
+                setLoadText(true);
                 
 
             }
@@ -61,8 +63,7 @@ export default function Products(props) {
     let z = minMax(0, 19)
     let c = minMax(0, 19)
     let v = minMax(0, 19)
-    let b = minMax(0, 19)
-    let bravo = minMax(0, 19)
+
     
 
     // displays products from api and loads either a div containing 'loading' text or the products themselves once the api data is loaded
@@ -72,20 +73,21 @@ export default function Products(props) {
         <div className={style["squares-container"]}>
             
 
-
+            
             {isLoaded ? (
                         <Link to={{ pathname: '/products', state: {products}}}><div className={style["square"]}>
-                            
+                            <div><p className={style["product-headers"]}>Lorem</p></div>
                             <img src={products.image} alt="img1" className={style["prod-img"]} ></img>
                             <div className={style["prod-img"]}></div>
                         </div></Link>      
             ) : (
                 <div>Loading...</div>
             )}
+            
 
             {isLoaded ? (
                         <Link to={{ pathname: '/products', state: {secondProduct}}}><div className={style["square"]}>
-                            
+                            <div><p className={style["product-headers"]}>Ipsum</p></div>
                             <img src={secondProduct.image} alt="img2" className={style["prod-img"]} ></img>
                             <div className={style["prod-img"]}></div>
                         </div></Link>
@@ -95,7 +97,7 @@ export default function Products(props) {
 
             {isLoaded ? (
                         <Link to={{ pathname: '/products', state: {thirdProduct}}}><div className={style["square"]}>
-                            
+                            <div><p className={style["product-headers"]}>Dolor</p></div>
                             <img src={thirdProduct.image} alt="img1" className={style["prod-img"]} ></img>
                             <div className={style["prod-img"]}></div>
                         </div></Link>
@@ -104,24 +106,18 @@ export default function Products(props) {
             )}
 
             {isLoaded ? (
-                        <Link to={{pathname: '/products', state: {fourthProduct}}}><div className={style["square"]}><img src={fourthProduct.image} alt="img1" className={style["prod-img"]} ></img>
+                        <Link to={{pathname: '/products', state: {fourthProduct}}}><div className={style["square"]}>
+                        <div><p className={style["product-headers"]}>Sit</p></div>
+                        <img src={fourthProduct.image} alt="img1" className={style["prod-img"]} ></img>
                         <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
                 <div>Loading...</div>
             )}
-
-            {isLoaded ? (
-                        <Link to={{pathname:'/products', state: {fifthProduct}}}><div className={style["square"]}><img src={fifthProduct.image} alt="img1" className={style["prod-img"]} ></img>
-                        <div className={style["prod-img"]}></div>
-                        </div></Link>
-            ) : (
-                <div>Loading...</div>
-            )}
-
-
+            
 
         </div>
+        
     )
 
     function minMax(min, max) {

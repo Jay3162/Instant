@@ -17,7 +17,7 @@ export default function Result(props) {
     const [resultProd, setResultProd] = useState(cont)
     let starCont = []
     const starHolder = []
-    console.log(Math.floor(props.Image[2].rating.rate))
+    console.log(Math.floor(props))
 
 // generate stars for each item to replace numeric rating
     for (let i = 0; i < props.Image.length; i++) {
@@ -38,7 +38,7 @@ export default function Result(props) {
             
             {resultProd.map((obj, index) => {
             return (
-                <div key="{index}" className={style["aligner"]}>
+                <div key={index} className={style["aligner"]}>
                     <Link to={{ pathname:'/products', state: {obj}}}>
                     <div className={style["prod-left"]}>
                         <img className={style["image-opts"]}src={obj.image}></img>

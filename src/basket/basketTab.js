@@ -17,19 +17,26 @@ export default function Tab () {
     const container = []
     let i = 0;
     let data = localStorage.basket
-    data = JSON.parse(data)
+    if (data) {
+        data = JSON.parse(data)
+
+            //adds each product to the container array if it's been added to the basket
+        for (i = 0; i < data.length; i++) {
+            let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
+
+            container.push(varProd)
+
+            
+            
+        }
+    }
+    
 
 
     let count = 0
 
 
-    //adds each product to the container array if it's been added to the basket
-    for (i = 0; i < data.length; i++) {
-        let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
 
-        container.push(varProd)
-        
-    }
 
 
   
@@ -39,30 +46,34 @@ export default function Tab () {
         count += container[i].price
     }
     count = Number((count).toFixed(2))
+
     
 
     console.log(container)
 
     const [basketProd, setBasketProd] = useState(container)
     const removeCurrItem = (index) => {
-        // container.splice(index, 1)
-        // setBasketProd(container)
-        console.log(index)
-        console.log(localStorage)
-        console.log(localStorage)
- 
+        container.splice(index, 1)
+        setBasketProd(container)
+        // console.log(localStorage)
+        // console.log(data[index].basketData.data)
+        // localStorage.removeItem(data[index].basketData.data)
+        // console.log(localStorage)
+        console.log(data[index].basketData.data)
+    }
 
-
+    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0) {
+        count += "0"
     }
 
 
-
+    
     return (
         <div>
             {basketProd.map((obj, index) => {
                 return (
                     // you changed info-tab's height
-                    <div className={style["info-tab"]} key="{index}">
+                    <div className={style["info-tab"]} key={index}>
                         
                         <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
                         <div className={style["layers"]}>

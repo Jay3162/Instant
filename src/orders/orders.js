@@ -78,9 +78,9 @@ function MyOrders() {
 export default function Orders() {
     return (
         <div>
-            <TopNav />,
-            <SearchBar />,
-            <SecondNav />,
+            <TopNav />
+            <SearchBar />
+            <SecondNav />
             <MyOrders />
         </div>
     )

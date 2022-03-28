@@ -1,16 +1,26 @@
 .html, body {
-    padding: 0px;
-    margin: 0px;
+    padding: 0%;
+    margin: 0%;
 }
 
 .container {
+ 
+  
     position: absolute;
-    left: 500px;
-    top: 11px;
+    left: 25%;
+    top: 1%;
+    z-index: 9;
+    width: 50%;
+}
+
+.aligner {
+    display: flex;
+    flex-direction: row;
 }
 
 .inputBar {
-    width: 900px;
+    /* width: 900px; */
+    width: 100%;
     border-radius: 5px 0px 0px 5px;
     padding: 10px;
     border-style: none;
@@ -26,7 +36,8 @@
 }
 
 .search-icon{
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 80%;
     
 }
 

@@ -32,7 +32,7 @@ export default function SearchBar(props) {
 
     return (
         <div className={style["container"]}>
-            <form >
+            <form className={style["aligner"]}>
                 <input className={style["inputBar"]} onChange={(e) => setTerm(e.target.value)}></input>
                 <button className={style["inputBtn"]} onClick={SearchOnClick}><FaSearch className={style["search-icon"]}/></button>
             </form>

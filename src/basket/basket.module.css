@@ -63,3 +63,15 @@
     top: 10px;
 }
 
+.cont-shop {
+    display: flex;
+    flex-direction: row;
+}
+
+.line {
+    padding-right: 0.5%;
+}
+
+.empty-bask-head {
+    font-weight: 900px;
+}

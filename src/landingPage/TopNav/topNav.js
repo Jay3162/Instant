@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import style from './topNav.module.css'
 import {Link} from 'react-router-dom'
+import { FaShoppingBag } from 'react-icons/fa'
 
 export default function TopNav(props) {
 
@@ -20,7 +21,8 @@ export default function TopNav(props) {
         
         
     }
-    console.log(props.name)
+
+    console.log(localStorage.length)
     let account;
     let tab;
     // if the user is logged in there name will be shown on the navbar and they'll have different account related options if they hover over the account button
@@ -53,24 +55,27 @@ export default function TopNav(props) {
             </div>
         )
     }
+    let baskSize = localStorage.length
 
     return (
         <div className={style["nav-container"]}>
-            <div className={style["nav-left"]}>
-                <span className={style["mySpan"]}><Link to={'/'}><img className={style["logoImg"]} src={logoImg}></img></Link></span>
-                {/* <span></span> */}
-            </div>, 
-            <div className={style["nav-right"]}>
-                <span className={style["mySpan"]}>
-                {account}
-                {mouseOn ? (<div className={style['speechBox']}>
-                    {tab}
-                </div>) : (<div></div>)}
+            <div className={style["nav-controls"]}>
+                <div className={style["nav-left"]}>
+                    <span className={style["mySpan"]}><Link to={'/'}><img className={style["logoImg"]} src={logoImg}/></Link></span>
 
-                </span>
+                </div> 
+                <div className={style["nav-right"]}>
+                    <span className={style["mySpan"]}>
+                    {account}
+                    {mouseOn ? (<div className={style['speechBox']}>
+                        {tab}
+                    </div>) : (<div></div>)}
 
-                <a href="/orders" className={style["mySpan"]}>orders</a>
-                <Link to={'/basket'}><span className={style["mySpan"]}>basket</span></Link>
+                    </span>
+
+                    <a href="/orders" className={style["mySpan"]}>orders</a>
+                    <Link to={'/basket'}><span className={style["mySpan"]}><FaShoppingBag className={style["basket-img"]}/>{baskSize} basket</span></Link>
+                </div>
             </div>
         </div>
     )

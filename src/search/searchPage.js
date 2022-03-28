@@ -48,9 +48,9 @@ export default function SearchPage(props) {
 
     return (
         <div>
-            <TopNav/>,
+            <TopNav/>
             <SearchBar/>
-            <SecondNav/>,
+            <SecondNav/>
             <div className={style["sideOpts"]} key="{index}">
                 <div>
                     
