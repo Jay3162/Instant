@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import style from './basketTab.module.css'
 import {useLocation} from 'react-router-dom'
+import {FaAngleDown} from 'react-icons/fa'
 
 
 export default function Tab () {
@@ -86,8 +87,8 @@ export default function Tab () {
                                 <p className={style["price"]}><b>£{obj.price}</b></p>
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
-                                    <button className={style["quantity-btn"]}>Qty: 1</button>
-                                    <span className={style["row-el"]}><button onClick={() => removeCurrItem(index)} value={index}>Delete</button></span>
+                                    <button className={style["quantity-btn"]}>Qty: 1<FaAngleDown/></button>
+                                    <span className={style["row-el"]}><a onClick={() => removeCurrItem(index)} value={index}>Delete</a></span>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span></div>
                                     

@@ -1,29 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { Redirect } from 'react-router-dom'
 import style from './register.module.css'
+import { signup } from '../firebase'
 
 
 export default function Register() {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [reqMade, setReqMade] = useState(false)
-    const submit = async (e) => {
-        e.preventDefault();
-        fetch('http://localhost:8000/api/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name,
-                email,
-                password
-            })
+    const [reqMade, setReqMade] = useState(false);
+    // const [name, setName] = useState('')
+    const emailRef = useRef();
+    const passwordRef = useRef()
 
-        })
-        setReqMade(true)
-    
+    async function handleSignup(e) {
+        e.preventDefault()
+        try {
+            await signup(emailRef.current.value, passwordRef.current.value)
+            setReqMade(true)
+            
+        } catch {
+            alert("error")
+        }
+
     }
     if (reqMade) {
         return (
@@ -34,16 +30,16 @@ export default function Register() {
         <div>
             <div className={style["login-container"]}>
             
-            <form className={style["form-box"]} onSubmit={submit}>
+            <form className={style["form-box"]} onSubmit={handleSignup}>
                 <div className={style["box-pos"]}>
                 <p className={style["sign-in-title"]}><b>Sign up</b></p>
-                <label className={style["subheader"]}><b>username</b></label>
-                <input type="text" className={style["username"]} onChange={(e) => setName(e.target.value)}></input>
                 <label className={style["subheader"]}><b>email</b></label>
-                <input type="email" className={style["email"]} onChange={(e) => setEmail(e.target.value)}></input>
+                <input type="email" className={style["email"]} ref={emailRef}></input>
                 <label className={style["subheader"]}><b>password</b></label>
-                <input type="password" className={style["password"]} onChange={(e) => setPassword(e.target.value)}></input>
-                <button className={style["btn"]}>Continue</button>
+                <input type="password" className={style["password"]} ref={passwordRef}></input>
+                {/* <label className={style["subheader"]}><b>username</b></label>
+                <input type="text" className={style["username"]} onChange={(e) => setName(e.target.value)}></input> */}
+                <button className={style["btn"]} >Continue</button>
                 </div>
 
             </form>
@@ -51,3 +47,5 @@ export default function Register() {
         </div>
     )
 }
+
+

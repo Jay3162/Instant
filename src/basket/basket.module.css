@@ -1,16 +1,21 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
     
 }
 .order-container {
     position: absolute;
-    top: 250px;
-    margin: 30px;
+    /* top: 250px; */
+    top: 25%;
+    /* margin: 30px; */
+    margin: 1.5%;
     background-color: white;
-    padding: 25px;
-    width: 1400px;
+    /* padding: 25px; */
+    padding: 4%;
+    /* width: 1400px; */
+    width: 73.7%;
     height: auto;
+    left: -0.5%;
     
 }
 
@@ -20,48 +25,97 @@
 }
 
 .tab-title {
-    position: relative;
-    font-size: 25px;
-    top: -20px;
+    position: absolute;
+    /* font-size: 25px; */
+    font-size: 1.5vw;
+    /* top: -20px; */
+    top: 3%;
+    left: 2%
 
+
+}
+
+.tab-title-cont {
+    display: flex;
+    flex-direction: row;
 }
 
 .deselect {
-    position: relative;
-    right: 185px;
-    top: 10px;
+    position: absolute;
+    /* right: 185px; */
+    /* right: 117.5%; */
+    left: 2%;
+    /* top: 10px; */
+    /* top: 30%; */
+    top: 10%;
+    font-size: 0.9vw;
+}
+
+.divider {
+    position: absolute;
+    width: 97%;
+    left: 1.7%;
 }
 .price-title {
-    position: relative;
-    top: 10px;
-    left: 1057px;
+    position: absolute;
+    /* top: 10px; */
+    /* top: 30%; */
+    top: 10%;
+    /* left: 1057px; */
+    /* left: 744%; */
+    left: 96%;
+    z-index: 9;
+    font-size: 1vw;
 }
 
 
 .total {
     position: absolute;
-    left: 1470px;
+    /* left: 1470px; */
+    left: 101%;
     background-color: white;
-    max-width: 350px;
-    top: 0px;
-    padding: 20px;
-    height: 70px;
+    /* max-width: 350px; */
+    /* max-width: 35%; */
+    width: 14%;
+    /* top: 0px; */
+    top: 0%;
+    /* padding: 20px; */
+    padding: 2%;
+    /* height: 70px; */
+    height: 24%;
+    font-size: 1vw;
 
 }
 
 .checkout {
-    position: relative;
-    display: block;
+    position: absolute;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    padding: 5px 20px;
+    /* padding: 5px 20px; */
+    padding: 1.5% 5.5%;
     border-style: none;
     background-color: yellow;
-    left: 0px;
-    width: 350px;
-    top: 10px;
+    /* left: 0px; */
+    left: 12%;
+    /* width: 350px; */
+    width: 75%;
+    height: 22.5%;
+
+    /* top: 10px; */
+    top: 50%;
+    font-size: 0.8vw;
+    
 }
+
+.subtotal {
+    position: absolute;
+    top: 20%;
+
+}
+
+
 
 .cont-shop {
     display: flex;
@@ -74,4 +128,6 @@
 
 .empty-bask-head {
     font-weight: 900px;
+    
 }
+

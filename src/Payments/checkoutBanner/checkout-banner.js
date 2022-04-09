@@ -4,7 +4,7 @@ import TopNav from "../../landingPage/TopNav/topNav";
 import {FaLock} from 'react-icons/fa'
 
 export default function CheckoutBanner(props) {
-    const instantLogo = new URL('../../landingPage/TopNav/logos/instant-logos-final.png', import.meta.url)
+    const instantLogo = require('../../landingPage/TopNav/logos/instant-logos-final.png')
 
     return (
         <div className={style["banner"]}>

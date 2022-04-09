@@ -56,8 +56,10 @@ export default function Basket() {
     let count = 0
     for (let i = 0; i < totalPrice.length; i++) {
         count += totalPrice[i]
+        
 
     }
+    Number((count).toFixed(2))
 
     console.log(count)
 
@@ -91,10 +93,13 @@ export default function Basket() {
                 <div className={style["order-tab"]}>
                     <div className={style["tab-top"]}>
                         <p className={style["tab-title"]}>Shopping Basket</p>
-                        <a className={style["deselect"]}>Deselect all items</a>
-                        <p className={style["price-title"]}>Price</p>
+                        <div className={style["tab-title-cont"]}>
+                            <a className={style["deselect"]}>Deselect all items</a>
+                            <p className={style["price-title"]}>Price</p>
                         </div>
-                        <hr></hr>
+
+                        </div>
+                        <hr className={style["divider"]}></hr>
                         <div><Tab /></div>
                         {data ? (<button type='submit' onClick={Delete}>delete</button>) : (<div></div>)}
                         
@@ -110,8 +115,10 @@ export default function Basket() {
         )
     }
     if (count % 1 !== 0 && (count + 0.01) % 2 !== 0) {
+        
         count += "0"
     }
+    console.log(count)
     console.log(emptyBasket)
     
     return (

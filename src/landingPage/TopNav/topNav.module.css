@@ -5,8 +5,8 @@
 
 .nav-container {
     position: absolute;
-    background-color: rgba(5, 10, 32, 0.925);
-    height: 6%;
+    background-color: rgba(19, 25, 33);
+    height: 60px;
     width: 100%;
     color: white;
     top: 0%;   
@@ -21,56 +21,43 @@
 
 }
 
-.nav-left {
 
-
-
-
-}
 
 .nav-right {
     position: absolute;
     display: flex;
-    flex-direction: row;
-    left: 80%;
+    left: 78vw;
     top: 30%;
-}
-
-span {
 
 }
+
+/* span {
+    
+} */
 
 .mySpan {
     padding-right: 30px;
     color: white;
     font-weight: bold;
-    
+    display: flex;
 
 }
 
+@media all, (max-width: 700px) {
+    .logoImg {
+        top: 0vh;
+        left: 0vw;
+    }
+}
+
 .logoImg {
-    width: 10%;
-    height: 300%;
-    position: absolute;
-    left: 10%;
-    top: -90%;
-    
-
-    z-index: 9;
-    
+    width: 15vw;
+    position: relative;
+    left: -35vw;
+    top: -11.7vh;
+    z-index: 1;
 
     
-    /* max-width: 200px;
-    max-height: 200px; */
-    /* max-width: 20%;
-    max-height: 20%; */
-    /* top: -420%;
-    left: 800%; */
-
-
-    
-
-    border: 1px solid green;
 }
 
 .logoImg:hover {
@@ -78,21 +65,21 @@ span {
 }
 
 .speechBox {
-    position: relative;
+    position: absolute;
     background-color: rgb(255, 255, 255);
     z-index: 1;
-    width: 250px;
+    width: 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: -100px;
-    padding: 20px;
+    left: -5vw;
+    padding: 1vw;
     border-radius: 6px;
     border: 1px solid rgb(177, 177, 177);
     color: black;
     font-size: 10px;
-    top: 40%;
+    top: 2.2vh;
 }
 
 .signIn-btn {
@@ -117,18 +104,36 @@ span {
 .account-sections {
     display: flex;
     flex-direction: column;
-}
-
-.username {
     color: white;
 }
 
+.username {
+    font-size: 1.4vh;
+    color: white;
+}
+
+
 .basket-img {
-    height: 10%;
-    width: 10%;
+    position: absolute;
+    height: 3vh;
+    width: 2vw;
+    top: -0.6vh;
+    left: 68%;
 }
 
 .basket-sec {
     display: flex;
     flex-direction: row;
+}
+
+.basket-num {
+    color: rgb(211, 136, 4);
+    position: absolute;
+    left: 73.1%;
+    font-size: 2vh;
+}
+
+.basket {
+    position: relative;
+    left: 2vw;
 }

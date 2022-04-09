@@ -20,11 +20,13 @@ function Product() {
 
 
     const [basketData, setBasketData] = useState({data:Image})
-    console.log(Image)
 
-    console.log(varProd.price)
     let realPrice = varProd.price
-    if (realPrice % 1 !== 0 && (realPrice + 0.01) % 2 !== 0) {
+    let countDecimals = function(num) {
+        if(Math.floor(num.valueOf()) === num.valueOf()) return 0;
+        return num.toString().split(".")[1].length || 0;
+    }
+    if (realPrice % 1 !== 0 && (realPrice + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 1) { 
         realPrice = realPrice + "0"
     }
  
@@ -79,7 +81,7 @@ function Product() {
                  <div className={style["stars"]}>{starCount} {varProd.rating.rate}</div>
                  <div className={style["review-num"]}>reviews {varProd.rating.count}</div>
              </div>
-             <hr></hr>
+             <hr className={style["grey-line"]}></hr>
 
              <div>{varProd ? (<div className={style["prices"]}>£{realPrice}</div>) : (<div></div>)}</div>
 
@@ -90,7 +92,7 @@ function Product() {
                  <p><b>Style</b>: Single</p>
 
              </div>
-             <hr></hr>
+             <hr className={style["grey-line"]}></hr>
              <div className={style["description"]}>
                  <p><b>About this item</b></p>
                  <ul>

@@ -1,31 +1,45 @@
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import { Redirect } from 'react-router-dom';
 import style from './login.module.css'
+import { login } from '../firebase';
 
 export default function Login() {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const emailRef = useRef();
+    const passwordRef = useRef();
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const submitIn = async(e) => {
+
+    async function handleLogin(e) {
         e.preventDefault()
+        try{
+            await login(emailRef.current.value, passwordRef.current.value)
+            setIsLoggedIn(true)
+        } catch(e) {
+            alert("error")
+            console.error(e)
+            console.log(e)
+        }
         
-        await fetch('http://localhost:8000/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'include',
-            body: JSON.stringify({
-                email,
-                password
-            })
+    }
+    // const submitIn = async(e) => {
+    //     e.preventDefault()
+        
+    //     await fetch('http://localhost:8000/api/login', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         credentials: 'include',
+    //         body: JSON.stringify({
+    //             email,
+    //             password
+    //         })
             
 
-        })
-        setIsLoggedIn(true)
-        console.log(isLoggedIn)
+    //     })
+    //     setIsLoggedIn(true)
+    //     console.log(isLoggedIn)
 
-    }
+    // }
     if (isLoggedIn) {
         return (
             <Redirect to={'/'} />
@@ -36,13 +50,14 @@ export default function Login() {
         <div className={style["background"]}>
             <div className={style["login-container"]}>
             
-            <form className={style["form-box"]} onSubmit={submitIn}>
+            <form className={style["form-box"]} onSubmit={handleLogin}>
                 <div className={style["box-pos"]}>
                 <p className={style["sign-in-title"]}><b>Sign In</b></p>
                 <input type="email" className={style["username"]}
-                onChange={e => setEmail(e.target.value)}></input>
+                ref={emailRef}></input>
+
                 <input type="password" className={style["password"]}
-                onChange={e => setPassword(e.target.value)}></input>
+                ref={passwordRef}></input>
                 <button className={style["btn"]}>Continue</button>
                 </div>
 

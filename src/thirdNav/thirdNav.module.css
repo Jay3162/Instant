@@ -1,0 +1,118 @@
+.navbar {
+    position: absolute;
+    width: 100vw;
+    height: 1vh;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    display: flex;
+    flex-direction: row;
+    top: 11vh;
+    font-size: 1.3vh;
+
+
+}
+
+.nav-el {
+    height: 30px;
+    width: 100vw;
+    /* top: 10px; */
+    background-color: white;
+ 
+}
+
+.segments {
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    font-size: 1vh;
+}
+
+.account-title {
+    position: relative;
+    top: 14vh;
+    left: 25vw;
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.segment {
+    border-radius: 10px;
+    border: 1px solid rgb(199, 198, 198);
+    background-color: white;
+    height: 10vh;
+    width: 16vw;
+    margin-right: 20px;
+}
+
+.seg-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+}
+
+.tabs {
+    position: absolute;
+    left: 24.6vw;
+    top: 60vh;
+}
+
+.tab {
+    width: 16vw;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(199, 198, 198);
+    height: 32vh;
+    margin: 10px;
+}
+
+.tab-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-title {
+    font-size: 2vh;
+    font-weight: 650;
+    padding: 5%;
+}
+
+.tab-span {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    padding-left: 5%;
+}
+
+.order-img {
+    position: relative;
+    max-height: 8vh;
+    max-width: 4vw;
+    top: 1vh;
+    left: 1vw;
+}
+
+.pos-set {
+    position: absolute;
+    left: -5vw;
+}
+
+.segtxt {
+    position: relative;
+    left: 5vw;
+    top: -7vh;
+}
+
+.segtitle {
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.seginfo {
+    font-size: 1.5vh;
+    max-width: 11vw;
+}
