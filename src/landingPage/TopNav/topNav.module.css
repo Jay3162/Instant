@@ -135,12 +135,12 @@
     align-items: center;
     justify-content: center;
     left: -5vw;
-    padding: 1vw;
+    padding: 0.5vw;
     border-radius: 6px;
     border: 1px solid rgb(177, 177, 177);
     color: black;
     font-size: 10px;
-    top: 2.2vh;
+    top: 4.2vh;
     
 }
 
