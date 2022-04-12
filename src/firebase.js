@@ -4,12 +4,14 @@ import { initializeApp } from "firebase/app";
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDBcnrEc4JHqxnGhbMDCGN6b4Wxxfw58vY",
+//   apiKey: "AIzaSyDBcnrEc4JHqxnGhbMDCGN6b4Wxxfw58vY",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "e-commerce-site-5a452.firebaseapp.com",
   projectId: "e-commerce-site-5a452",
   storageBucket: "e-commerce-site-5a452.appspot.com",

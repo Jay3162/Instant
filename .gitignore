@@ -25,3 +25,5 @@ yarn-error.log*
 .env
 
 final-plans.md
+# Local Netlify folder
+.netlify

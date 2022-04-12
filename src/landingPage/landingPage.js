@@ -27,10 +27,9 @@ export default function LandingPage() {
             <Products />
 
             <Products />
-            <ProductsRow />
 
             <Products />
-            <ProductsRow />
+
             
             
             
