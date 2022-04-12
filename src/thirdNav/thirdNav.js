@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import style from './thirdNav.module.css'
 
 
@@ -15,7 +16,7 @@ export default function ThirdNav() {
     return (
         <div >
             <div className={style["navbar"]}>
-                <span className={style["nav-el"]}>Amazon.co.uk</span>
+                <span className={style["nav-el"]}><b><Link to='/'>Amazon.co.uk</Link></b></span>
                 <span className={style["nav-el"]}>Today's Deals</span>
                 <span className={style["nav-el"]}>Warehouse Deals</span>
                 <span className={style["nav-el"]}>Outlet</span>
@@ -26,7 +27,7 @@ export default function ThirdNav() {
                 <span className={style["nav-el"]}>Prime Video</span>
                 <span className={style["nav-el"]}>Prime Student</span>
                 <span className={style["nav-el"]}>Mobile Apps</span>
-                <span className={style["nav-el"]}>Amazon Pickup Locations</span>
+                <span className={style["nav-el"]}>Amazon Pickups</span>
                 <span className={style["nav-el"]}>Amazon Assistant</span>
             </div>
             <p className={style["account-title"]}>Your Account</p>

@@ -53,15 +53,15 @@ export default function Tab () {
     console.log(container)
 
     const [basketProd, setBasketProd] = useState(container)
-    const removeCurrItem = (index) => {
-        container.splice(index, 1)
-        setBasketProd(container)
-        // console.log(localStorage)
-        // console.log(data[index].basketData.data)
-        // localStorage.removeItem(data[index].basketData.data)
-        // console.log(localStorage)
-        console.log(data[index].basketData.data)
-    }
+    // const removeCurrItem = (index) => {
+    //     container.splice(index, 1)
+    //     setBasketProd(container)
+    //     // console.log(localStorage)
+    //     // console.log(data[index].basketData.data)
+    //     // localStorage.removeItem(data[index].basketData.data)
+    //     // console.log(localStorage)
+    //     console.log(data[index].basketData.data)
+    // }
 
     if (count % 1 !== 0 && (count + 0.01) % 2 !== 0) {
         count += "0"
@@ -88,7 +88,7 @@ export default function Tab () {
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
                                     <button className={style["quantity-btn"]}>Qty: 1<FaAngleDown/></button>
-                                    <span className={style["row-el"]}><a onClick={() => removeCurrItem(index)} value={index}>Delete</a></span>
+                                    <span className={style["row-el"]}><a  value={index}>Delete</a></span>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span></div>
                                     

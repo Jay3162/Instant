@@ -51,13 +51,13 @@ export default function Result(props) {
                         <div className={style["rating"]}>
                             <div className={style["rate-row"]}>
                                  <p className={style["starholder"]}>{starHolder[index]}</p>
-                                <p>{obj.rating.rate}</p>
+                                <p className={style["num-stars"]}>{obj.rating.rate}</p>
                             </div>
                     
-                            <p>{obj.rating.count} reviews</p>
+                            <p className={style["reviews"]}>{obj.rating.count} reviews</p>
                         </div>
-                        <p>£{obj.price}</p>
-                        <p>Get it <b>Tomorrow, Mar 15</b></p>
+                        <p className={style["price"]}>£{obj.price}</p>
+                        <p className={style["del-date"]}>Get it <b>Tomorrow, Mar 15</b></p>
                     </div>
                     
                 </div>

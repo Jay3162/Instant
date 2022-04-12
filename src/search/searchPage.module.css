@@ -5,19 +5,20 @@
 
 .sideOpts {
     position: absolute;
-    top: 150px;
+    top: 15%;
+    font-size: 1vw;
     
 }
 
 
 .middle {
     position: absolute;
-    left: 500px;
-    top: 150px;
+    left: 30%;
+    top: 15%;
 }
 
 .mid-col-title {
-    font-size: 25px;
+    font-size: 1.8vw;
 }
 
 .delivery {
@@ -44,15 +45,21 @@
 
 .bar-size {
     position: relative;
-    width: 40px;
+    width: 2vw;
     padding: 5px;
     margin-right: 5px;
     border-radius: 2px;
     border: 1px solid rgb(158, 158, 158);
+    font-size: 0.7vw;
 }
 
 .bar-btn {
     padding: 5px;
     border-radius: 5px;
     border: solid 1px rgb(158, 158, 158);
+    font-size: 0.7vw;
+}
+
+.checkbox {
+    transform: scale(0.5);
 }

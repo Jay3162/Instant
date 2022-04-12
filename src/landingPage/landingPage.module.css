@@ -11,8 +11,10 @@
     
     width: 80%;
     position: absolute;
-    left: 200px;
-    top: 10.3vh;
+    left: 10vw;
+    /* top: 10.2vh; */
+    top: 99px;
+
     display: flex;
     align-items: center;
     justify-content: center;

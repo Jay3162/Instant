@@ -1,21 +1,26 @@
+:root {
+    --font-size: 1.4vh;
+}
 
 
 .middle-col {
     position: relative;
-    left: 600px;
-    width: 800px;
+    left: 30vw;
+    width: 40vw;
     padding: 3rem;
-    top: 30px;
+    top: 3vh;
+    font-size: 1.7vh;
     
 }
 
 .right-col {
     position: absolute;
-    left: 1500px;
-    width: 280px;
+    left: 75vw;
+    /* width: 280px; */
+    width: 14.895768833849328vw;
+    font-size: 1.6vh;
     
-    
-    top: 70px;
+    top: 8vh;
 
 }
 
@@ -33,8 +38,9 @@
     border-radius: 80px;
     background-color: yellow;
     border-style: none;
-    width: 250px;
-    padding: 7px;
+    width: 13vw;
+    padding: 0.5vw;
+    font-size: var(--font-size)
 }
 
 .basket-btn:hover {
@@ -45,9 +51,10 @@
     border-radius: 80px;
     background-color: orange;
     border-style: none;
-    width: 250px;
-    padding: 7px;
-    margin-top: 10px; 
+    width: 13vw;
+    padding: 0.5vw;
+    margin-top: 1vh; 
+    font-size: var(--font-size);
 }
 
 .buy-btn:hover {
@@ -61,10 +68,10 @@ a {
 .img-col {
     position: absolute;
     display: flex;
-    top: 80px;
-    width: 400px;
-    height: 400px;
-    left: 200px;
+    top: 8.1vh;
+    width: 20vw;
+    height: 40vh;
+    left: 10vw;
 
 }
 
@@ -79,15 +86,284 @@ a {
 }
 
 .titleProps {
-    font-size: 24px;
+    font-size: 2.6vh;
 }
 
 .prices {
-    font-size: 18px;
+    font-size: 2vh;
 }
 
 .leveller {
     top: 5%;
-    width: 100%;
+    width: 100vw;
 }
+
+@media (max-width: 400px) {
+    .right-col {
+        position: absolute;
+        left: 76vw;
+        /* width: 280px; */
+        width: 20.895768833849328vw;
+        font-size: 0.9vh;
+        
+        top: 10vh;
+    
+    }
+
+    .container-1 {
+        border: 1px solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        height: 38vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .middle-col {
+        position: relative;
+        left: 22vw;
+        width: 40vw;
+        padding: 3rem;
+        top: 4vh;
+        font-size: 1.7vh;
+        
+    }
+
+    .img-col {
+        position: absolute;
+        display: flex;
+        top: 10.1vh;
+        width: 25vw;
+        height: 25vh;
+        left: 6vw;
+    
+    }
+
+    .basket-btn{
+        border-radius: 80px;
+        background-color: yellow;
+        border-style: none;
+        width: 13vw;
+        padding: 0.5vw;
+        font-size: 1vw;
+    }
+    
+    
+    .buy-btn{
+        border-radius: 80px;
+        background-color: orange;
+        border-style: none;
+        width: 13vw;
+        padding: 0.5vw;
+        margin-top: 0.5vh;
+        font-size: 1vw;
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+    .right-col {
+        position: absolute;
+        left: 76vw;
+        /* width: 280px; */
+        width: 20.895768833849328vw;
+        font-size: 1.9vh;
+        
+        top: 18vh;
+    
+    }
+
+    .container-1 {
+        border: 1px solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        height: 38vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .middle-col {
+        position: relative;
+        left: 25vw;
+        width: 40vw;
+        padding: 3rem;
+        top: 8vh;
+        font-size: 1.7vh;
+        
+    }
+
+    .img-col {
+        position: absolute;
+        display: flex;
+        top: 18vh;
+        width: 20vw;
+        height: 40vh;
+        left: 6vw;
+    
+    }
+
+    .basket-btn{
+        border-radius: 80px;
+        background-color: yellow;
+        border-style: none;
+        width: 17vw;
+        padding: 0.5vw;
+        font-size: 1vw;
+    }
+    
+    
+    .buy-btn{
+        border-radius: 80px;
+        background-color: orange;
+        border-style: none;
+        width: 17vw;
+        padding: 0.5vw;
+        margin-top: 0.5vh;
+        font-size: 1vw;
+    }
+
+    
+}
+
+
+@media (max-width: 1000px) {
+    .right-col {
+        position: absolute;
+        left: 76vw;
+        /* width: 280px; */
+        width: 20.895768833849328vw;
+        font-size: 1.9vh;
+        
+        top: 18vh;
+    
+    }
+
+    .container-1 {
+        border: 1px solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        height: 38vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .middle-col {
+        position: relative;
+        left: 26vw;
+        width: 40vw;
+        padding: 3rem;
+        top: 8vh;
+        font-size: 2vh;
+        
+    }
+
+    .img-col {
+        position: absolute;
+        display: flex;
+        top: 18vh;
+        width: 20vw;
+        height: 40vh;
+        left: 6vw;
+    
+    }
+
+    .basket-btn{
+        border-radius: 80px;
+        background-color: yellow;
+        border-style: none;
+        width: 18vw;
+        padding: 0.5vw;
+        font-size: 1vw;
+    }
+    
+    
+    .buy-btn{
+        border-radius: 80px;
+        background-color: orange;
+        border-style: none;
+        width: 18vw;
+        padding: 0.5vw;
+        margin-top: 0.5vh;
+        font-size: 1vw;
+    }
+
+    .titleProps {
+        font-size: 3vh;
+    }
+    
+}
+
+
+@media (max-height: 950px) {
+    .right-col {
+        position: absolute;
+        left: 76vw;
+        /* width: 280px; */
+        width: 20.895768833849328vw;
+        font-size: 1vh;
+        
+        top: 10vh;
+    
+    }
+
+    .container-1 {
+        border: 1px solid rgb(192, 192, 192);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        height: 38vh;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .middle-col {
+        position: relative;
+        left: 22vw;
+        width: 40vw;
+        padding: 3rem;
+        top: 5vh;
+        font-size: 1.5vh;
+        
+    }
+
+    .img-col {
+        position: absolute;
+        display: flex;
+        top: 10vh;
+        width: 25vw;
+        height: 20vh;
+        left: 3.5vw;
+    
+    }
+
+    .basket-btn{
+        border-radius: 80px;
+        background-color: yellow;
+        border-style: none;
+        width: 15vw;
+        padding: 0.5vw;
+        font-size: 1vw;
+    }
+    
+    
+    .buy-btn{
+        border-radius: 80px;
+        background-color: orange;
+        border-style: none;
+        width: 15vw;
+        padding: 0.5vw;
+        margin-top: 0.5vh;
+        font-size: 1vw;
+    }
+
+    .titleProps {
+        font-size: 2vh;
+    }
+    
+}
+
 

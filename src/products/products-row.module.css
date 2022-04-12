@@ -1,6 +1,7 @@
 row-container {
     position: relative;
     display: flex;
+    
 }
 
 .row {

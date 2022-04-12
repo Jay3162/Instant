@@ -18,13 +18,6 @@ export default function TopNav() {
         } catch {
             alert("error")
         }
-        // fetch('http://localhost:8000/api/logout', {
-        //     method: 'POST',
-        //     headers: {
-        //        'Content-Type': 'application/json' 
-        //     },
-        //     credentials: 'include'
-        // })
      
     }
 
@@ -40,7 +33,7 @@ export default function TopNav() {
         tab = (
             <div className={style["account-sections"]}>
                 <h2>Your Account</h2>
-                <Link>Your Account</Link>
+                <Link to={'/account'}>Your Account</Link>
                 <Link to={'/orders'}>Your Orders</Link>
                 <Link to={'/'} onClick={handleLogout}>Logout</Link>
             </div>
@@ -78,7 +71,8 @@ export default function TopNav() {
                     </span>
 
                     <a href="/orders" className={style["mySpan"]}>orders</a>
-                    <Link to={'/basket'}><span className={style["mySpan"]}><FaShoppingBag className={style["basket-img"]}/><div className={style["basket-num"]}>{baskSize}</div><div className={style["basket"]}>basket</div></span></Link>
+                    {/* <FaShoppingBag className={style["basket-img"]}/> */}
+                    <Link to={'/basket'}><span className={style["mySpan"]}><div className={style["basket-num"]}>{baskSize}</div><div className={style["basket"]}>basket</div></span></Link>
                 </div>
             </div>
         </div>

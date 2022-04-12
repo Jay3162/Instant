@@ -5,10 +5,14 @@
 
 .image-opts {
     position: relative;
-    max-height: 150px;
+    max-height: 15vh;
+    max-width: 5vw;
+    min-height: 15%;
+    min-width: 15%;
+    /* max-height: 150px;
     max-width: 150px;
     min-height: 150px;
-    min-width: 150px;
+    min-width: 150px; */
 }
 
 .prod-left {
@@ -18,7 +22,7 @@
 }
 .prod-right {
     position: relative;
-    left: 20px;
+    left: 2vw;
     
 }
 
@@ -30,7 +34,7 @@
 .title {
     padding-bottom: 5px;
     color: black;
-    font-size: 20px;
+    font-size: 2vh;
     
 }
 
@@ -52,4 +56,21 @@
 
 .starholder {
     padding-right: 10px;
+    font-size: 0.9vw;
+}
+
+.reviews {
+    font-size: 0.9vw;
+}
+
+.price {
+    font-size: 0.9vw;
+}
+
+.del-date {
+    font-size: 0.9vw;
+}
+
+.num-stars {
+    font-size: 0.9vw;
 }

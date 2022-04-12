@@ -5,19 +5,24 @@
     border-bottom: 1px solid rgb(194, 194, 194);
     display: flex;
     flex-direction: row;
-    top: 11vh;
+    top: 99px;
     font-size: 1.3vh;
 
 
 }
 
+
+
 .nav-el {
-    height: 30px;
+    
+    height: 2.2vh;
     width: 100vw;
-    /* top: 10px; */
     background-color: white;
+    padding: 3px;
  
 }
+
+
 
 .segments {
     position: absolute;
@@ -40,14 +45,14 @@
     background-color: white;
     height: 10vh;
     width: 16vw;
-    margin-right: 20px;
+    margin-right: 2vh;
 }
 
 .seg-row {
     position: relative;
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .line {
@@ -76,7 +81,7 @@
 }
 
 .tab-title {
-    font-size: 2vh;
+    font-size: 1vw;
     font-weight: 650;
     padding: 5%;
 }
@@ -86,6 +91,7 @@
     flex-direction: column;
     margin-bottom: 1%;
     padding-left: 5%;
+    font-size: 0.85vw;
 }
 
 .order-img {
@@ -108,11 +114,17 @@
 }
 
 .segtitle {
-    font-size: 2vh;
+    font-size: 1vw;
     font-weight: 500;
 }
 
 .seginfo {
-    font-size: 1.5vh;
+    font-size: 0.75vw;
     max-width: 11vw;
 }
+
+/* @media (max-width: 400), (max-height: 700) {
+    .seginfo {
+        font-size: 1.5vh;
+    }
+} */
