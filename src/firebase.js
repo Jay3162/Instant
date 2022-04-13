@@ -10,7 +10,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-//   apiKey: "AIzaSyDBcnrEc4JHqxnGhbMDCGN6b4Wxxfw58vY",
+
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "e-commerce-site-5a452.firebaseapp.com",
   projectId: "e-commerce-site-5a452",
