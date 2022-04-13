@@ -3,14 +3,13 @@ import SearchBar from '../searchBar/searchBar'
 import TopNav from '../landingPage/TopNav/topNav'
 import SecondNav from '../landingPage/secondNav/secondNav'
 import style from './productPage.module.css'
-import Products from '../products/products'
 import { useLocation } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
 
 
 
 function Product() {
+
 
     // takes value stored in state and displays it in jsx
     const location = useLocation()
@@ -30,10 +29,7 @@ function Product() {
         realPrice = realPrice + "0"
     }
  
-    let num = 0;
-    const sendData = (props) => {
-        num += 1
-        console.log(num.toString())
+    const sendData = () => {
         
         //uses the localStorage to set and send the product to the basket page if the user adds the product to the basket
         setBasketData({data: Image})
@@ -45,21 +41,17 @@ function Product() {
         })();
 
         basketItems.push({basketData})
-        console.log(basketItems)
         localStorage.setItem("basket", JSON.stringify(basketItems));
-        console.log(localStorage)
-        console.log(JSON.parse(localStorage.basket))  
 
     }
-    const refresh = () => {
-        window.location.reload(false)
-    }
+    // const refresh = () => {
+    //     window.location.reload(false)
+    // }
     const double = () => {
         sendData()
-        refresh()
+        // refresh()
     }
     let starCount = []
-    let starHolder = []
     const bigNum = Math.floor(varProd.rating.rate)
     for (let i = 0; i < bigNum; i++) {
         starCount.push(<FaStar className={style["starColor"]}/>)
@@ -71,7 +63,7 @@ function Product() {
     return (
         <div className={style["leveller"]}>
 
-            <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image}></img></div>) : (<div></div>)}</div>
+            <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image} alt="product image"></img></div>) : (<div></div>)}</div>
          <div className={style["middle-col"]}>
 
              <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>

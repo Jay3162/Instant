@@ -15,25 +15,19 @@ export default function Basket() {
 
     let row = [];
     // makes a new Tab for each item inside the localstorage
-    console.log(localStorage.basket)
     let data = localStorage.getItem("basket")
     data = JSON.parse(data)
     let conv_data = JSON.parse(localStorage.getItem("basket"))
     let make_order;
     let user = useAuth();
-    console.log(loggedIn)
-
-
-
-
-    //calc the total
-    let total = 0
-    
 
     if (data) {
         for (let i = 0; i < data.length; i++) {
             row.push(<Tab key={i} />)
         }
+        
+        
+
         if (localStorage.basket.length === 0 || localStorage.basket === undefined) {
             row.push(<Tab key={0} />)
         }
@@ -42,31 +36,25 @@ export default function Basket() {
     let totalPrice = []
     if (data) {
         for (let i = 0; i < data.length; i++) {
-            console.log(data[i].basketData.data.products)
             
-            let varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct
-            console.log(varProd.price)
+            var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct
+
             if (varProd.price) {
                 totalPrice.push(varProd.price)
-            }
-
-            // let varProd = conv_data[i].basketData.data.products.price || conv_data[i].basketData.data.obj.price || conv_data[i].basketData.data.secondProduct.price || conv_data[i].basketData.data.thirdProduct.price || conv_data[i].basketData.data.fourthProduct.price
-
-
-            
+            }   
         }
-        console.log(totalPrice)
 
     }
     let count = 0
+    console.log(count)
     for (let i = 0; i < totalPrice.length; i++) {
         count += totalPrice[i]
-        
-
     }
-    Number((count).toFixed(2))
-
+    Math.floor(count.toFixed(2))
+    count = count.toFixed(2)
     console.log(count)
+
+
 
     const Delete = () => {
         localStorage.clear()
@@ -74,10 +62,8 @@ export default function Basket() {
     }
     const checkout_btn = () => {
         if (user.email !== undefined) {
-            console.log(user.email)
             setLoggedin(true)
         }
-        console.log(loggedIn)
     }
 
     
@@ -116,11 +102,17 @@ export default function Basket() {
                 </div>
         )
     }
-    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0) {
-        
+
+    let countDecimals = function(num) {
+        if(Math.floor(num.valueOf()) === num.valueOf()) return 0;
+        return num.toString().split(".")[1].length || 0;
+    }
+
+    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 1) {
         count += "0"
     }
-    console.log(conv_data)
+
+
 
 
     if (loggedIn) {
@@ -150,17 +142,12 @@ export default function Basket() {
                 <div className={style["order-tab"]}>
                     <div className={style["tab-top"]}>
                         <p className={style["tab-title"]}>Shopping Basket</p>
-                        {/* <a className={style["deselect"]}>Deselect all items</a> */}
                         <p className={style["price-title"]}>Price</p>
                         </div>
                         <hr></hr>
                         <div><Tab /></div>
                         {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)}
                         
-                        {/* <div className={style["total"]}>
-                            <p className={style["subtotal"]}>Subtotal ({totalPrice.length} items): <b>£{count}</b></p>
-                            <Link to={'/Login'}><button className={style["checkout"]}>Proceed to Checkout</button></Link>
-                            </div> */}
                         {make_order}
 
                     </div>

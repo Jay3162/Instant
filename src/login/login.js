@@ -16,30 +16,10 @@ export default function Login() {
         } catch(e) {
             alert("error")
             console.error(e)
-            console.log(e)
         }
         
     }
-    // const submitIn = async(e) => {
-    //     e.preventDefault()
-        
-    //     await fetch('http://localhost:8000/api/login', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         credentials: 'include',
-    //         body: JSON.stringify({
-    //             email,
-    //             password
-    //         })
-            
 
-    //     })
-    //     setIsLoggedIn(true)
-    //     console.log(isLoggedIn)
-
-    // }
     if (isLoggedIn) {
         return (
             <Redirect to={'/'} />

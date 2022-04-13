@@ -7,7 +7,7 @@ import { logout, useAuth } from '../../firebase'
 
 export default function TopNav() {
     const currentUser = useAuth()
-    
+   
     const [mouseOn, setMouseOn] = useState(false)
     
     const logoImg = require('./logos/instant-logos-final.png')
@@ -26,7 +26,6 @@ export default function TopNav() {
     let tab;
     // if the user is logged in there name will be shown on the navbar and they'll have different account related options if they hover over the account button
     if (currentUser) {
-        console.log(currentUser)
         account = (
             <a href='#' onMouseOver={() => setMouseOn(!mouseOn)} className={style["username"]}>Hello, {currentUser.email}</a>
         )
@@ -52,7 +51,7 @@ export default function TopNav() {
             </div>
         )
     }
-    let baskSize = localStorage.length
+    
 
     return (
         <div className={style["nav-container"]}>
@@ -72,7 +71,7 @@ export default function TopNav() {
 
                     <a href="/orders" className={style["mySpan"]}>orders</a>
                     {/* <FaShoppingBag className={style["basket-img"]}/> */}
-                    <Link to={'/basket'}><span className={style["mySpan"]}><div className={style["basket-num"]}>{baskSize}</div><div className={style["basket"]}>basket</div></span></Link>
+                    <Link to={'/basket'}><span className={style["mySpan"]}><div className={style["basket"]}>basket</div></span></Link>
                 </div>
             </div>
         </div>

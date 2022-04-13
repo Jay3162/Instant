@@ -10,14 +10,14 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-//   apiKey: "AIzaSyDBcnrEc4JHqxnGhbMDCGN6b4Wxxfw58vY",
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  apiKey: "AIzaSyDBcnrEc4JHqxnGhbMDCGN6b4Wxxfw58vY",
   authDomain: "e-commerce-site-5a452.firebaseapp.com",
   projectId: "e-commerce-site-5a452",
   storageBucket: "e-commerce-site-5a452.appspot.com",
   messagingSenderId: "802947144947",
   appId: "1:802947144947:web:c18f7d0d2059458d17eb86"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

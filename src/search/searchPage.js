@@ -10,7 +10,6 @@ import { useLocation } from 'react-router-dom'
 export default function SearchPage(props) {
     const location = useLocation()
     const Image = location.state
-    console.log(Image)
     // names checkboxes and defines the number of checkboxes made per section
     const delivery_opts = [
         {name: "Today by 7pm"},

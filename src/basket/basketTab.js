@@ -23,7 +23,7 @@ export default function Tab () {
 
             //adds each product to the container array if it's been added to the basket
         for (i = 0; i < data.length; i++) {
-            let varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
+            var varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
 
             container.push(varProd)
 
@@ -50,25 +50,21 @@ export default function Tab () {
 
     
 
-    console.log(container)
 
     const [basketProd, setBasketProd] = useState(container)
-    // const removeCurrItem = (index) => {
-    //     container.splice(index, 1)
-    //     setBasketProd(container)
-    //     // console.log(localStorage)
-    //     // console.log(data[index].basketData.data)
-    //     // localStorage.removeItem(data[index].basketData.data)
-    //     // console.log(localStorage)
-    //     console.log(data[index].basketData.data)
-    // }
 
-    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0) {
-        count += "0"
+    let countDecimals = function(num) {
+        if(Math.floor(num.valueOf()) === num.valueOf()) return 0;
+        return num.toString().split(".")[1].length || 0;
     }
 
+ 
 
-    
+    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 0) {
+        count += "0"
+        Number((count).toFixed(2))
+    }
+
     return (
         <div>
             {basketProd.map((obj, index) => {
@@ -78,7 +74,7 @@ export default function Tab () {
                         
                         <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
                         <div className={style["layers"]}>
-                            <div >
+                            <div key={obj.id}>
                                 
                                 <img className={style["order-img"]} src={obj.image}></img>
                                 <p className={style["order-title"]}>{obj.title}</p>
@@ -88,7 +84,6 @@ export default function Tab () {
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
                                     <button className={style["quantity-btn"]}>Qty: 1<FaAngleDown/></button>
-                                    <span className={style["row-el"]}><a  value={index}>Delete</a></span>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span></div>
                                     

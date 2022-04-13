@@ -5,17 +5,10 @@ import SecondNav from '../landingPage/secondNav/secondNav.js'
 import SearchBar from '../searchBar/searchBar'
 import {MdChevronRight} from 'react-icons/md'
 import { useLocation } from 'react-router-dom'
-import { useAuth } from '../firebase'
 import OrderTab from './order-tab'
 
 
-function MyOrders(props) {
-    const image = useLocation()
-    console.log(image.state)
-    let product = image.state;
-    const container = []
-
-
+function MyOrders() {
     return (
         <div className={style["container"]}>
             <div className={style["top-links"]}>

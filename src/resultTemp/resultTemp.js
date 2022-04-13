@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 
 export default function Result(props) {
-    console.log(props.Image[0])
     let items;
     if (props.Image) {
         items = props.Image[0]
@@ -17,7 +16,8 @@ export default function Result(props) {
     const [resultProd, setResultProd] = useState(cont)
     let starCont = []
     const starHolder = []
-    console.log(Math.floor(props))
+
+    
 
 // generate stars for each item to replace numeric rating
     for (let i = 0; i < props.Image.length; i++) {
@@ -31,7 +31,6 @@ export default function Result(props) {
         starHolder.push(starCont)
         starCont = []
     }
-    console.log(starHolder)
     
     return (
         <div>

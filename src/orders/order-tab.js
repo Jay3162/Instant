@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom'
 export default function OrderTab (){
     
     const image = useLocation()
-    console.log(image.state)
     let varProd;
     const container = []
     if (image.state) {
@@ -17,7 +16,6 @@ export default function OrderTab (){
 
     const [orderInfo, setOrderInfo] = useState(container)
 
-    console.log(container)
     let name = 'John Doe'
     return (
         <div>
