@@ -7,7 +7,7 @@ import Results from '../Results/Results'
 import { useLocation } from 'react-router-dom'
 
 
-export default function SearchPage(props) {
+export default function SearchPage() {
     const location = useLocation()
     const Image = location.state
     // names checkboxes and defines the number of checkboxes made per section

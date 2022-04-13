@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import TopNav from '../landingPage/TopNav/topNav'
 import SecondNav from '../landingPage/secondNav/secondNav'
 import SearchBar from '../searchBar/searchBar'
@@ -46,13 +46,11 @@ export default function Basket() {
 
     }
     let count = 0
-    console.log(count)
     for (let i = 0; i < totalPrice.length; i++) {
         count += totalPrice[i]
     }
     Math.floor(count.toFixed(2))
     count = count.toFixed(2)
-    console.log(count)
 
 
 
