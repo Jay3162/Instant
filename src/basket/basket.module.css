@@ -47,6 +47,15 @@
 
 }
 
+@media (max-width: 1500px) {
+    .tab-title {
+        top: 3vh;
+    }
+
+}
+
+
+
 .tab-title-cont {
     display: flex;
     flex-direction: row;
@@ -68,11 +77,13 @@
     width: 97%;
     left: 1.7%;
 }
+
+
 .price-title {
     position: absolute;
     /* top: 10px; */
     /* top: 30%; */
-    top: 5vh;
+    top: 13%;
     /* left: 1057px; */
     /* left: 744%; */
     left: 92%;

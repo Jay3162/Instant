@@ -44,12 +44,10 @@ function Product() {
         localStorage.setItem("basket", JSON.stringify(basketItems));
 
     }
-    // const refresh = () => {
-    //     window.location.reload(false)
-    // }
+
     const double = () => {
         sendData()
-        // refresh()
+ 
     }
     let starCount = []
     const bigNum = Math.floor(varProd.rating.rate)

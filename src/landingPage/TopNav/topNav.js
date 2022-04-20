@@ -71,7 +71,7 @@ export default function TopNav() {
 
                     <a href="/orders" className={style["mySpan"]}>orders</a>
                     {/* <FaShoppingBag className={style["basket-img"]}/> */}
-                    <Link to={'/basket'}><span className={style["mySpan"]}><div className={style["basket"]}>basket</div></span></Link>
+                    <span className={style["mySpan"]}><Link to={'/basket'}><div className={style["basket"]}>basket</div></Link></span>
                 </div>
             </div>
         </div>
