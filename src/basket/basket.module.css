@@ -21,6 +21,10 @@
 
 .tab-top {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    
 
     
 }
@@ -37,37 +41,15 @@
 } */
 
 .tab-title {
-    position: absolute;
-    /* font-size: 25px; */
     font-size: 1.5vw;
-    /* top: -20px; */
-    top: 4vh;
-    left: 5.5%
-
-
 }
 
-@media (max-width: 1500px) {
-    .tab-title {
-        top: 3vh;
-    }
-
-}
-
-
-
-.tab-title-cont {
-    display: flex;
-    flex-direction: row;
-}
 
 .deselect {
     position: absolute;
-    /* right: 185px; */
-    /* right: 117.5%; */
+
     left: 2%;
-    /* top: 10px; */
-    /* top: 30%; */
+
     top: 10%;
     font-size: 0.9vw;
 }
@@ -80,13 +62,6 @@
 
 
 .price-title {
-    position: absolute;
-    /* top: 10px; */
-    /* top: 30%; */
-    top: 13%;
-    /* left: 1057px; */
-    /* left: 744%; */
-    left: 92%;
     z-index: 9;
     font-size: 1vw;
 }

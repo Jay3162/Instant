@@ -12,16 +12,12 @@
     width: 80%;
     position: absolute;
     left: 10vw;
-    /* top: 10.2vh; */
     top: 99px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
-    mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
-     
-    
+    mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));  
    
 }
 

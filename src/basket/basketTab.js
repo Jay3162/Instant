@@ -31,16 +31,8 @@ export default function Tab () {
             
         }
     }
-    
-
 
     let count = 0
-
-
-
-
-
-  
 
     // calculate the subtotal for the botton of the tab
     for (let i = 0; i < container.length; i++) {

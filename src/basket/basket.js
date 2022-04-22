@@ -141,15 +141,15 @@ export default function Basket() {
                     <div className={style["tab-top"]}>
                         <p className={style["tab-title"]}>Shopping Basket</p>
                         <p className={style["price-title"]}>Price</p>
-                        </div>
-                        <hr></hr>
-                        <div><Tab /></div>
-                        {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)}
-                        
-                        {make_order}
-
                     </div>
+                    <hr></hr>
+                    <div><Tab /></div>
+                    {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)}
+                    
+                    {make_order}
                 </div>
+                
+            </div>
         </div>
     )
 }

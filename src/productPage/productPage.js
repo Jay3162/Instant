@@ -62,7 +62,7 @@ function Product() {
         <div className={style["leveller"]}>
 
             <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image} alt="product image"></img></div>) : (<div></div>)}</div>
-         <div className={style["middle-col"]}>
+            <div className={style["middle-col"]}>
 
              <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>
              

@@ -1,22 +1,19 @@
 :root {
-    --font-size: 23px;
+    --font-size: 2.3vw;
 }
 
 li {
     list-style: none;
     margin: 0px;
     padding: 0px;
+    font-size: 1vw;
     
     
 }
 
 .dropdown {
-    position: absolute;
+    position: fixed;
     z-index: 9;
-
-    
-    
-    
     
 }
 
@@ -24,6 +21,9 @@ li {
     fill: white;
     display: flex;
     justify-content: flex-start;
+    align-content: center;
+    height: 2.5vh;
+    width: 2.5vw;
     
 }
 
@@ -31,6 +31,7 @@ li {
     position: absolute;
     width: 300px;
     color: black;
+    
     
     
     

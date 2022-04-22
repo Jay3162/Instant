@@ -3,6 +3,7 @@
 }
 
 
+
 .middle-col {
     position: relative;
     left: 30vw;
@@ -32,6 +33,7 @@
     height: 38vh;
     background-color: white;
     border-radius: 10px;
+    align-items: flex-start;
 }
 
 .basket-btn{

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import style from './sidemenu.module.css'
-import {ReactComponent as CogIcon} from './icons/iconmonstr-menu-1.svg'
+import {ReactComponent as BarsIcon} from './icons/iconmonstr-menu-1.svg'
 
 
 
@@ -24,7 +24,7 @@ export default function Sidemenu() {
         return (
             
             <div className={style["dropdown"]}>
-                <Dropdown icon={<CogIcon />}></Dropdown>
+                <Dropdown icon={<BarsIcon />}></Dropdown>
                 <div className={style["screen"]}>
                     {open ? <div className={style["backBox"]}></div> : <div></div>}
                     <Dropdown ><p className={style["headerSize"]}><b>Trending</b></p></Dropdown>
