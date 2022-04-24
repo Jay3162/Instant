@@ -1,7 +1,7 @@
 
 
 .row-container {
-    position: fixed;
+    position: absolute;
 
     top: 60px;
     width: 100vw;
