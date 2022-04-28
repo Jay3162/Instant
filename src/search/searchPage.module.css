@@ -3,10 +3,18 @@
     padding: 0px;
 }
 
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    margin-top: 7vh;
+}
+
 .sideOpts {
     position: absolute;
-    top: 15%;
+    /* top: 15%; */
     font-size: 1vw;
+    margin-left: 1vw;
     
 }
 
@@ -14,7 +22,7 @@
 .middle {
     position: absolute;
     left: 30%;
-    top: 15%;
+    /* top: 15%; */
 }
 
 .mid-col-title {

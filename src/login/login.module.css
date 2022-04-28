@@ -6,51 +6,58 @@
 .background {
     background-color: white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-container {
-    position: absolute;
-    left: 40%;
-    top: 40%;
+
     display: flex;
-    justify-items: center;
+    height: 30vh;
+    align-items: center;
     border: 1px solid rgb(192, 192, 192);
     background-color: white;
     border-radius: 10px;
-    width: 300px;
+
+
 
 }
 
 .sign-in-title {
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .form-box {
     
-    width: 200px;
-    height: 250px;
+    width: 20vw;
+    height: 20vh;
 }
 
 .username {
-    position: relative;
-    padding: 8px 30px;
+
+    padding: 1vh 1.9vw;
     border-radius: 5px;
-    border: 1px solid black;
-    margin: 5px;
+    border: 1px solid rgb(73, 73, 73);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.password {
+    
+    padding: 1vh 1.9vw;
+    border-radius: 5px;
+    border: 1px solid rgb(73, 73, 73);
+    margin-bottom: 8px;
 
     
 }
 
-.password {
-    position: relative;
-    padding: 8px 30px;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 8px;
-    right: 1%;
-
-    
+.username:focus, .password:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgb(255, 184, 3);
+    border: 1px solid rgb(255, 184, 3);
 }
 
 .btn {
@@ -58,14 +65,21 @@
     padding: 8px 60px;
     border-style: none;
     border-radius: 5px;
-    background-color: yellow;
-    left: 10%;
-    margin: 8px;
+    background-color: rgb(243,204,108);
+    margin-bottom: 8px;
+    border: 1px solid rgb(31, 31, 31);
 
 }
 
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
 .box-pos {
-    position: relative;
-    left: 20%;
-    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }

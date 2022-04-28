@@ -12,7 +12,7 @@ li {
 }
 
 .dropdown {
-    position: fixed;
+    position: absolute;
     z-index: 9;
     
 }
@@ -21,6 +21,7 @@ li {
     fill: white;
     display: flex;
     justify-content: flex-start;
+    margin-left: 1vw;
     align-content: center;
     height: 2.5vh;
     width: 2.5vw;
@@ -31,11 +32,10 @@ li {
     position: absolute;
     width: 300px;
     color: black;
-    
-    
-    
-    
-     
+    margin-left: 0.7vw;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+   
 }
 
 .menu {
@@ -43,11 +43,6 @@ li {
 
 }
 
-
-
-.headerSize:hover {
-    font-size: var(--font-size);
-}
 
 .backBox {
     position: absolute;
@@ -57,5 +52,6 @@ li {
     width: 300px;
     z-index: -3;
     border-radius: 10px;
+    
     
 }

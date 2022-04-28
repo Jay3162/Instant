@@ -16,21 +16,17 @@ export default function LandingPage() {
     
     return (
         <div className={style["container"]}>
-
             <TopNav/>
-            <SearchBar/>
             <SecondNav/>
-            <img className={style["promoImg"]} src={alexImg}></img>
+            <div className={style["wrapper"]}>
+                <img className={style["promoImg"]} src={alexImg}></img>
+                <Products />
 
-            <Products />
+                <Products />
 
-            <Products />
+                <Products /> 
+            </div>
 
-            <Products />
-
-            
-            
-            
         </div>
     )
 

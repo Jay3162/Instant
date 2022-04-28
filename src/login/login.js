@@ -32,13 +32,13 @@ export default function Login() {
             
             <form className={style["form-box"]} onSubmit={handleLogin}>
                 <div className={style["box-pos"]}>
-                <p className={style["sign-in-title"]}><b>Sign In</b></p>
-                <input type="email" className={style["username"]}
-                ref={emailRef}></input>
+                    <p className={style["sign-in-title"]}>Sign In</p>
+                    <input type="email" className={style["username"]}
+                    ref={emailRef}></input>
 
-                <input type="password" className={style["password"]}
-                ref={passwordRef}></input>
-                <button className={style["btn"]}>Continue</button>
+                    <input type="password" className={style["password"]}
+                    ref={passwordRef}></input>
+                    <button className={style["btn"]}>Continue</button>
                 </div>
 
             </form>

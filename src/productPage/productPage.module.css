@@ -5,24 +5,16 @@
 
 
 .middle-col {
-    position: relative;
-    left: 30vw;
     width: 40vw;
-    padding: 3rem;
-    top: 3vh;
     font-size: 1.7vh;
     
 }
 
 .right-col {
-    position: absolute;
-    left: 75vw;
-    /* width: 280px; */
     width: 14.895768833849328vw;
     font-size: 1.39vh;
+    justify-content: center;
     
-    top: 8vh;
-
 }
 
 .container-1 {
@@ -33,16 +25,18 @@
     height: 38vh;
     background-color: white;
     border-radius: 10px;
-    align-items: flex-start;
+    font-size: 0.7vw;
+    
+
 }
 
 .basket-btn{
     border-radius: 80px;
     background-color: yellow;
     border-style: none;
-    width: 13vw;
-    padding: 0.5vw;
-    font-size: var(--font-size)
+    width: 95%;
+    padding: 0.35vw;
+    font-size: 0.8vw;
 }
 
 .basket-btn:hover {
@@ -53,10 +47,12 @@
     border-radius: 80px;
     background-color: orange;
     border-style: none;
-    width: 13vw;
-    padding: 0.5vw;
-    margin-top: 1vh; 
-    font-size: var(--font-size);
+    width: 95%;
+    padding-top: 0.35vw;
+    padding-bottom: 0.35vw;
+    margin-top: 0.5vh; 
+    font-size: 0.8vw;
+    
 }
 
 .buy-btn:hover {
@@ -65,22 +61,25 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .img-col {
-    position: absolute;
+
     display: flex;
-    top: 8.1vh;
     max-width: 20vw;
     max-height: 40vh;
-    left: 10vw;
+
 
 }
 
 .leveller {
-    position: absolute;
+
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+
 }
 
 .starColor{
@@ -88,285 +87,29 @@ a {
 }
 
 .titleProps {
-    font-size: 2.6vh;
+    font-size: 2vw;
 }
 
 .prices {
-    font-size: 2vh;
+    font-size: 1vw;
 }
 
-.leveller {
-    top: 5%;
-    width: 100vw;
-}
-
-@media (max-width: 400px) {
-    .right-col {
-        position: absolute;
-        left: 76vw;
-        /* width: 280px; */
-        width: 20.895768833849328vw;
-        font-size: 0.9vh;
-        
-        top: 10vh;
-    
-    }
-
-    .container-1 {
-        border: 1px solid rgb(192, 192, 192);
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        height: 38vh;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .middle-col {
-        position: relative;
-        left: 22vw;
-        width: 40vw;
-        padding: 3rem;
-        top: 4vh;
-        font-size: 1.7vh;
-        
-    }
-
-    .img-col {
-        position: absolute;
-        display: flex;
-        top: 10.1vh;
-        width: 25vw;
-        height: 25vh;
-
-        left: 6vw;
-    
-    }
-
-    .basket-btn{
-        border-radius: 80px;
-        background-color: yellow;
-        border-style: none;
-        width: 13vw;
-        padding: 0.5vw;
-        font-size: 1vw;
-    }
-    
-    
-    .buy-btn{
-        border-radius: 80px;
-        background-color: orange;
-        border-style: none;
-        width: 13vw;
-        padding: 0.5vw;
-        margin-top: 0.5vh;
-        font-size: 1vw;
-    }
-
-    
-}
-
-@media (max-width: 800px) {
-    .right-col {
-        position: absolute;
-        left: 76vw;
-        /* width: 280px; */
-        width: 20.895768833849328vw;
-        font-size: 1.9vh;
-        
-        top: 18vh;
-    
-    }
-
-    .container-1 {
-        border: 1px solid rgb(192, 192, 192);
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        height: 38vh;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .middle-col {
-        position: relative;
-        left: 25vw;
-        width: 40vw;
-        padding: 3rem;
-        top: 8vh;
-        font-size: 1.7vh;
-        
-    }
-
-    .img-col {
-        position: absolute;
-        display: flex;
-        top: 18vh;
-        width: 20vw;
-        height: 40vh;
-        left: 6vw;
-    
-    }
-
-    .basket-btn{
-        border-radius: 80px;
-        background-color: yellow;
-        border-style: none;
-        width: 17vw;
-        padding: 0.5vw;
-        font-size: 1vw;
-    }
-    
-    
-    .buy-btn{
-        border-radius: 80px;
-        background-color: orange;
-        border-style: none;
-        width: 17vw;
-        padding: 0.5vw;
-        margin-top: 0.5vh;
-        font-size: 1vw;
-    }
-
-    
+.mini-description {
+    font-size: 1.1vw;
 }
 
 
-@media (max-width: 1000px) {
-    .right-col {
-        position: absolute;
-        left: 76vw;
-        /* width: 280px; */
-        width: 20.895768833849328vw;
-        font-size: 1.9vh;
-        
-        top: 18vh;
-    
-    }
-
-    .container-1 {
-        border: 1px solid rgb(192, 192, 192);
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        height: 38vh;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .middle-col {
-        position: relative;
-        left: 26vw;
-        width: 40vw;
-        padding: 3rem;
-        top: 8vh;
-        font-size: 2vh;
-        
-    }
-
-    .img-col {
-        position: absolute;
-        display: flex;
-        top: 18vh;
-        width: 20vw;
-        height: 40vh;
-        left: 6vw;
-    
-    }
-
-    .basket-btn{
-        border-radius: 80px;
-        background-color: yellow;
-        border-style: none;
-        width: 18vw;
-        padding: 0.5vw;
-        font-size: 1vw;
-    }
-    
-    
-    .buy-btn{
-        border-radius: 80px;
-        background-color: orange;
-        border-style: none;
-        width: 18vw;
-        padding: 0.5vw;
-        margin-top: 0.5vh;
-        font-size: 1vw;
-    }
-
-    .titleProps {
-        font-size: 3vh;
-    }
+.reviews {
+    display: flex;
+    flex-direction: row;
     
 }
 
-
-@media (max-height: 950px) {
-    .right-col {
-        position: absolute;
-        left: 76vw;
-        /* width: 280px; */
-        width: 20.895768833849328vw;
-        font-size: 1vh;
-        
-        top: 10vh;
-    
-    }
-
-    .container-1 {
-        border: 1px solid rgb(192, 192, 192);
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        height: 38vh;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .middle-col {
-        position: relative;
-        left: 22vw;
-        width: 40vw;
-        padding: 3rem;
-        top: 5vh;
-        font-size: 1.5vh;
-        
-    }
-
-    .img-col {
-        position: absolute;
-        display: flex;
-        top: 10vh;
-        width: 25vw;
-        height: 20vh;
-        left: 3.5vw;
-    
-    }
-
-    .basket-btn{
-        border-radius: 80px;
-        background-color: yellow;
-        border-style: none;
-        width: 15vw;
-        padding: 0.5vw;
-        font-size: 1vw;
-    }
-    
-    
-    .buy-btn{
-        border-radius: 80px;
-        background-color: orange;
-        border-style: none;
-        width: 15vw;
-        padding: 0.5vw;
-        margin-top: 0.5vh;
-        font-size: 1vw;
-    }
-
-    .titleProps {
-        font-size: 2vh;
-    }
-    
+.stars {
+    margin-right: 1vw;
 }
+
+
+
 
 

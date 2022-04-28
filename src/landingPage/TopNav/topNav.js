@@ -4,6 +4,7 @@ import style from './topNav.module.css'
 import {Link} from 'react-router-dom'
 import { FaShoppingBag } from 'react-icons/fa'
 import { logout, useAuth } from '../../firebase'
+import SearchBar from '../../searchBar/searchBar'
 
 export default function TopNav() {
     const currentUser = useAuth()
@@ -59,7 +60,8 @@ export default function TopNav() {
                 <div className={style["nav-left"]}>
                     <span className={style["mySpan"]}><Link to={'/'}><img className={style["logoImg"]} src={logoImg}/></Link></span>
 
-                </div> 
+                </div>
+                <SearchBar/>
                 <div className={style["nav-right"]}>
                     <span className={style["mySpan"]}>
                     {account}

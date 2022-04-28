@@ -1,36 +1,32 @@
 .squares-container {
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: row;
-    left: 16vw;
-    top: 30vh;
-
-
-    max-width: 70vw;
-
+    top: 10vh;    
+    
+    
 }
 
 .square {
     position: relative;
-
+    display: flex;
+    align-items: center;
     width: 15vw;
     height: 35.5vh;
+    /* height: 20vw; */
     margin-left: 1.5vw;
+    justify-content: center;
     
     background-color: white;
     margin-bottom: 2vh;
-
-    
     
 }
 
 .prod-img {
-    position: relative;
+    position: absolute;
     height: 20.2vh;
     width: 10vw;
-    left: 2.6vw;
-    top: 7.2vh;
+
 }
 
 .product-headers {
@@ -39,7 +35,6 @@
     left: 2vw;
     font-weight: 700;
     font-size: 1.2vw;
-    font-size: 2.3vh;
     color: black;
     
 }

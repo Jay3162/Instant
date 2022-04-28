@@ -64,26 +64,26 @@ function Product() {
             <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image} alt="product image"></img></div>) : (<div></div>)}</div>
             <div className={style["middle-col"]}>
 
-             <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>
-             
-             <a href='#' className="store-link">Visit the Store</a>
-             <div className={style["reviews"]}>
-                 <div className={style["stars"]}>{starCount} {varProd.rating.rate}</div>
-                 <div className={style["review-num"]}>reviews {varProd.rating.count}</div>
-             </div>
-             <hr className={style["grey-line"]}></hr>
+                <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>
+                
+                <a className="store-link">Visit the Store</a>
+                <div className={style["reviews"]}>
+                    <div className={style["stars"]}>{starCount} {varProd.rating.rate}</div>
+                    <div className={style["review-num"]}>reviews {varProd.rating.count}</div>
+                </div>
+                <hr className={style["grey-line"]}></hr>
 
-             <div>{varProd ? (<div className={style["prices"]}>£{realPrice}</div>) : (<div></div>)}</div>
+                <div>{varProd ? (<div className={style["prices"]}>£{realPrice}</div>) : (<div></div>)}</div>
 
-             <div className={style["mini-description"]}>
+                <div className={style["mini-description"]}>
 
-                 <div>{varProd ? (<p><b>Description</b>: {varProd.category}</p>) : (<div></div>)}</div>
-                 
-                 <p><b>Style</b>: Single</p>
+                    <div>{varProd ? (<p><b>Description</b>: {varProd.category}</p>) : (<div></div>)}</div>
+                    
+                    <p><b>Style</b>: Single</p>
 
-             </div>
-             <hr className={style["grey-line"]}></hr>
-             <div className={style["description"]}>
+                </div>
+                <hr className={style["grey-line"]}></hr>
+                <div className={style["description"]}>
                  <p><b>About this item</b></p>
                  <ul>
 
@@ -116,13 +116,13 @@ function Product() {
 
                      <button className={style["buy-btn"]}>Buy Now</button>
                  </div>
-                 <a href="#">Secure transaction</a>
+                 <a>Secure transaction</a>
                  <p>Dispatches from Instant</p>
                  <p>Sold by Instant</p>
                  <div className={style["insurance"]}>
                      <p><b>Add Extra Protection?</b></p>
-                     <a href="#">3-year product care for £9.49</a>
-                     <a href="#">2-year product care for £6.39</a>
+                     <a>3-year product care for £9.49</a>
+                     <a>2-year product care for £6.39</a>
 
                      <p>Add gift options</p>
                     

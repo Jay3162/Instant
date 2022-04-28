@@ -4,9 +4,6 @@
 }
 
 .container {
-    position: absolute;
-    left: 25%;
-    top: 1.35%;
     z-index: 9;
     width: 50%;
 
@@ -46,8 +43,16 @@
     padding: 10px;
     border-radius: 0px 5px 5px 0px;
     border-style: none;
-    background-color: yellow;
+    background-color: rgb(243,204,108);
+}
 
+.inputBar:focus {
+    outline: none;
+    border: 3px solid rgb(255, 184, 3);
+}
+
+.inputBtn:disabled {
+    color: black;
 }
 
 .search-icon{
@@ -58,5 +63,5 @@
 
 .inputBtn:hover {
     cursor: pointer;
-    background-color: rgb(241, 241, 0);
+    background-color: rgb(255, 192, 32);
 }
