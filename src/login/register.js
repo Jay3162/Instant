@@ -30,20 +30,20 @@ export default function Register() {
         <div className={style["background"]}>
             <div className={style["login-container"]}>
             
-            <form className={style["form-box"]} onSubmit={handleSignup}>
-                <div className={style["box-pos"]}>
-                <p className={style["sign-in-title"]}>Sign up</p>
-                <label className={style["subheader"]}>email</label>
-                <input type="email" className={style["email"]} ref={emailRef}></input>
-                <label className={style["subheader"]}>password</label>
-                <input type="password" className={style["password"]} ref={passwordRef}></input>
-                {/* <label className={style["subheader"]}><b>username</b></label>
-                <input type="text" className={style["username"]} onChange={(e) => setName(e.target.value)}></input> */}
-                <button className={style["btn"]} >Continue</button>
-                </div>
+                <form className={style["form-box"]} onSubmit={handleSignup}>
+                    <div className={style["box-pos"]}>
+                        <p className={style["sign-in-title"]}>Sign up</p>
+                        <label className={style["subheader"]}>email</label>
+                        <input type="email" className={style["email"]} ref={emailRef}></input>
+                        <label className={style["subheader"]}>password</label>
+                        <input type="password" className={style["password"]} ref={passwordRef}></input>
+                        {/* <label className={style["subheader"]}><b>username</b></label>
+                        <input type="text" className={style["username"]} onChange={(e) => setName(e.target.value)}></input> */}
+                        <button className={style["btn"]} >Continue</button>
+                    </div>
 
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
     )
 }

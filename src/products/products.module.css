@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    top: 10vh;    
+    top: 20vh;    
     
     
 }
@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     width: 15vw;
+
     height: 35.5vh;
     /* height: 20vw; */
     margin-left: 1.5vw;
@@ -38,3 +39,95 @@
     color: black;
     
 }
+
+
+@media (max-width: 800px) {
+    .squares-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 15vh;    
+    }
+    .square {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 15vw;
+    
+        height: 25.5vh;
+        /* height: 20vw; */
+        margin-left: 1.5vw;
+        justify-content: center;
+        
+        background-color: white;
+        margin-bottom: 2vh;
+        
+    }
+    .prod-img {
+        position: absolute;
+        height: 15.2vh;
+        width: 9vw;
+    
+    }
+}
+
+@media (max-width: 600px) {
+    .squares-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 15vh;    
+    }
+    .square {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 15vw;
+    
+        height: 20.5vh;
+        /* height: 20vw; */
+        margin-left: 1.5vw;
+        justify-content: center;
+        
+        background-color: white;
+        margin-bottom: 2vh;
+        
+    }
+    .prod-img {
+        position: absolute;
+        height: 10.2vh;
+        width: 8vw;
+    
+    }
+}
+
+@media (max-width: 400px) {
+    .squares-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 10vh;    
+    }
+    .square {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 15vw;
+    
+        height: 18.5vh;
+        /* height: 20vw; */
+        margin-left: 1.5vw;
+        justify-content: center;
+        
+        background-color: white;
+        margin-bottom: 2vh;
+        
+    }
+    .prod-img {
+        position: absolute;
+        height: 9.2vh;
+        width: 7vw;
+    
+    }
+}
+

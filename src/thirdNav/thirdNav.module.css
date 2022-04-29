@@ -1,11 +1,11 @@
 .navbar {
-    position: fixed;
+    position: absolute;
     width: 100vw;
-    height: 1vh;
+    height: 19.2px;
     border-bottom: 1px solid rgb(194, 194, 194);
     display: flex;
     flex-direction: row;
-    top: 107px;
+    top: 103px;
     font-size: 0.6vw;
     align-items: center;
     
@@ -13,15 +13,22 @@
 
 }
 
-
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
 
 .nav-el {
-    
-    height: 2.2vh;
+    height: 24.4px;
     width: 100vw;
     background-color: white;
     padding: 3px;
     align-items: center;
+    display: flex;
     
  
 }
@@ -30,27 +37,36 @@
 
 .segments {
     position: absolute;
-    top: 20vh;
-    left: 25vw;
     font-size: 1vh;
+    margin-top: 6vh;
 }
 
 .account-title {
-    display: flex;
-    flex-direction: row;
-    top: 14vh;
-    left: 25vw;
     font-weight: 700;
     font-size: 1.5vw;
+    margin-right: 40vw;
 }
 
 .segment {
     border-radius: 10px;
     border: 1px solid rgb(199, 198, 198);
     background-color: white;
-    height: 10vh;
-    width: 16vw;
+    height: 13vh;
+    width: 19.4vw;
     margin-right: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.segment a {
+    color: black;
+}
+
+.segment:hover {
+    filter: brightness(0.90);
+    cursor: pointer;
 }
 
 .seg-row {
@@ -60,24 +76,20 @@
     margin-bottom: 2vh;
 }
 
-.line {
-    position: absolute;
-    top: 50%;
-}
 
 .tabs {
-    position: absolute;
-    left: 24.6vw;
-    top: 60vh;
+
+    margin-top: 50vh;
 }
 
 .tab {
-    width: 16vw;
+    width: 19.4vw;
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgb(199, 198, 198);
-    height: 32vh;
-    margin: 10px;
+    height: 28vh;
+    margin-right: 2vh;
+    margin-bottom: 20px;
 }
 
 .tab-row {
@@ -100,22 +112,12 @@
 }
 
 .order-img {
-    position: relative;
     max-height: 8vh;
     max-width: 4vw;
-    top: 1vh;
-    left: 1vw;
-}
-
-.pos-set {
-    position: absolute;
-    left: -5vw;
 }
 
 .segtxt {
-    position: relative;
-    top: -5vh;
-    left: 5vw;
+    margin-left: 0.5vw;
 }
 
 .segtitle {
@@ -126,10 +128,12 @@
 .seginfo {
     font-size: 0.75vw;
     max-width: 11vw;
+    color:rgb(82, 82, 82)
 }
 
-/* @media (max-width: 400), (max-height: 700) {
-    .seginfo {
-        font-size: 1.5vh;
+
+@media (max-width: 400px) {
+    .wrapper {
+        margin-top: 70px;
     }
-} */
+}

@@ -16,7 +16,7 @@
 .login-container {
 
     display: flex;
-    height: 30vh;
+    height: 250px;
     align-items: center;
     border: 1px solid rgb(192, 192, 192);
     background-color: white;
@@ -30,17 +30,30 @@
     font-size: 2vw;
 }
 
-.form-box {
-    
-    width: 20vw;
-    height: 20vh;
+.box-pos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
+.form-box {
+    width: 300px;
+}
 
+label {
+    font-size: 1vw;
+}
+
+button {
+    font-size: 0.8vw;
+}
 
 .email {
 
-    padding: 1vh 1.9vw;
+    padding: 1vh;
+    width: 200px;
     border-radius: 5px;
     border: 1px solid rgb(73, 73, 73);
     margin-bottom: 5px;
@@ -49,7 +62,8 @@
 
 .password {
     
-    padding: 1vh 1.9vw;
+    padding: 1vh;
+    width: 200px;
     border-radius: 5px;
     border: 1px solid rgb(73, 73, 73);
     margin-bottom: 8px;
@@ -59,11 +73,12 @@
 
 .btn {
     position: relative;
-    padding: 8px 60px;
+    padding: 1vh;
+    width: 200px;
     border-style: none;
     border-radius: 5px;
     background-color: rgb(243,204,108);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     border: 1px solid rgb(31, 31, 31);
 
 }
@@ -79,10 +94,3 @@
     border: 1px solid rgb(255, 184, 3);
 }
 
-.box-pos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
