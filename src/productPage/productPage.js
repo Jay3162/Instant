@@ -10,12 +10,12 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa'
 
 function Product() {
 
-
     // takes value stored in state and displays it in jsx
     const location = useLocation()
     const Image = location.state
 
     const varProd = Image.products || Image.secondProduct || Image.thirdProduct || Image.fourthProduct || Image.fifthProduct || Image.obj
+
 
 
     const [basketData, setBasketData] = useState({data:Image})
@@ -140,7 +140,7 @@ function Product() {
 export default function ProductPage() {
     return (
         <div>
-        <TopNav Product1={Image.products}/>
+        <TopNav Image={Image}/>
         <SearchBar />
         <SecondNav />
         <Product />

@@ -6,9 +6,9 @@ import { FaShoppingBag } from 'react-icons/fa'
 import { logout, useAuth } from '../../firebase'
 import SearchBar from '../../searchBar/searchBar'
 
-export default function TopNav() {
+export default function TopNav(props) {
     const currentUser = useAuth()
-   
+    console.log(props)
     const [mouseOn, setMouseOn] = useState(false)
     
     const logoImg = require('./logos/instant-logos-final.png')
