@@ -21,7 +21,7 @@ export default function Tab () {
     if (data) {
         data = JSON.parse(data)
 
-            //adds each product to the container array if it's been added to the basket
+        //adds each product to the container array if it's been added to the basket
         for (i = 0; i < data.length; i++) {
             var varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
 
