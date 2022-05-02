@@ -50,11 +50,9 @@ export default function Tab () {
         return num.toString().split(".")[1].length || 0;
     }
 
- 
-
-    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 0) {
+    if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 1) {
         count += "0"
-        Number((count).toFixed(2))
+        console.log(basketProd.price)
     }
 
     return (

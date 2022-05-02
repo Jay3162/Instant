@@ -6,9 +6,10 @@
 
 .layer {
     position: relative;
-
+    display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 
 }
 
@@ -37,12 +38,11 @@
 
 .price {
     position: absolute;
-    /* font-size: 20px; */
+
     font-size: 1.2vw;
-    /* left: 1348px; */
-    /* left: 96.5%; */
+
     left: 95.5%;
-    /* top: -235px; */
+
     top: 10%;
 }
 
