@@ -6,33 +6,31 @@ import {FaAngleDown} from 'react-icons/fa'
 export default function Tab () {
     const [isChecked, setIsChecked] = useState(false)
 
-
-
+    var varProd;
     
     const handleOnChange = (e) => {
+        
         setIsChecked(!isChecked)
     }
     // retrieve data from localStorage and convert it from string
-    
     const container = []
     let i = 0;
-    console.log(localStorage)
     let data = localStorage.basket
-    console.log(data)
+
     if (data) {
         data = JSON.parse(data)
 
         //adds each product to the container array if it's been added to the basket
         for (i = 0; i < data.length; i++) {
-            var varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
-
-
+            varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
             container.push(varProd)
-
-            
-            
         }
-    }
+
+    } 
+
+
+    
+    
     let count = 0
 
     // calculate the subtotal for the botton of the tab
@@ -40,9 +38,6 @@ export default function Tab () {
         count += container[i].price
     }
     count = Number((count).toFixed(2))
-
-    
-
 
     const [basketProd, setBasketProd] = useState(container)
 
@@ -53,10 +48,9 @@ export default function Tab () {
 
     if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 1) {
         count += "0"
-        console.log(basketProd.price)
     }
 
-    let newBasket = []
+    var newBasket = []
 
     const deleteItem = (index) => {
         for (let i = 0; i < basketProd.length; i++) {
@@ -64,25 +58,23 @@ export default function Tab () {
                 newBasket.push(basketProd[i])
             }
 
-            
         }
-        // for (let i = 0; i < basketProd.length; i++) {
-        //     if (data[i].basketData.data)
-        // }
 
         setBasketProd(newBasket)
         if (newBasket.length <= 0) {
             localStorage.setItem("basket", JSON.stringify(newBasket));
-        }
+            localStorage.getItem("basket")
+        } 
         
     
     }
+
+
 
     return (
         <div>
             {basketProd.map((obj, index) => {
                 return (
-                    // you changed info-tab's height
                     <div className={style["info-tab"]} key={index}>
                         
                         <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
@@ -102,11 +94,11 @@ export default function Tab () {
                                     <span className={style["row-el"]} onClick={() => deleteItem(index)}><a>Delete</a></span>
                                 </div>
                                     
-                                </div>
-                                 
                             </div>
-                            
+                                 
                         </div>
+                            
+                    </div>
                       
                 )
             })}

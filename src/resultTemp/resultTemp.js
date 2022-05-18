@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import style from './resultTemp.module.css'
 import {FaStar, FaStarHalfAlt} from 'react-icons/fa'
 import { Link } from "react-router-dom";
+import LoadingIcons from "react-loading-icons";
 
 
 export default function Result(props) {
@@ -34,7 +35,6 @@ export default function Result(props) {
     
     return (
         <div>
-            
             {resultProd.map((obj, index) => {
             return (
                 <div key={index} className={style["aligner"]}>

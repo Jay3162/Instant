@@ -34,9 +34,11 @@ export default function Basket() {
     }
     let totalPrice = []
     if (data) {
+        console.log(data)
+        console.log(data.length)
         for (let i = 0; i < data.length; i++) {
             
-            var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct
+            var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct 
 
             if (varProd.price) {
                 totalPrice.push(varProd.price)
@@ -48,9 +50,7 @@ export default function Basket() {
     for (let i = 0; i < totalPrice.length; i++) {
         count += totalPrice[i]
     }
-    // Math.floor(count.toFixed(2))
-    // count = count.toFixed(2)
-    // console.log(count)
+
 
     // checks the product's price and appends a 0 based on the number of floats and remainders
 
@@ -61,6 +61,7 @@ export default function Basket() {
 
     if (count % 1 !== 0 && (count + 0.01) % 2 !== 0 && countDecimals(varProd.price) === 1) {
         count += "0"
+
     }
 
 

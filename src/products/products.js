@@ -2,7 +2,7 @@ import style from './products.module.css'
 
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import LoadingIcons from 'react-loading-icons'
 
 
 export default function Products(props) {
@@ -81,7 +81,7 @@ export default function Products(props) {
                             <div className={style["prod-img"]}></div>
                         </div></Link>      
             ) : (
-                <div>Loading...</div>
+                <LoadingIcons.Bars />
             )}
             
 
@@ -92,7 +92,7 @@ export default function Products(props) {
                             <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
-                <div>Loading...</div>
+                <LoadingIcons.Bars />
             )}
 
             {isLoaded ? (
@@ -102,7 +102,7 @@ export default function Products(props) {
                             <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
-                <div>Loading...</div>
+                <LoadingIcons.Bars />
             )}
 
             {isLoaded ? (
@@ -112,7 +112,7 @@ export default function Products(props) {
                         <div className={style["prod-img"]}></div>
                         </div></Link>
             ) : (
-                <div>Loading...</div>
+                <LoadingIcons.Bars />
             )}
             
 
