@@ -13,8 +13,6 @@ export default function Products(props) {
     const [thirdProduct, setThirdProducts] = useState([])
     const [fourthProduct, setFourthProducts] = useState([])
 
-    // see if you can put all of the products into one array
-    const [finalProducts, setFinalProducts] = useState([])
 
     //tells the system whether or not the api data is loaded or not
     const [isLoaded, setIsLoaded] = useState(false)

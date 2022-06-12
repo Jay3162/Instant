@@ -2,14 +2,10 @@ import React, {useState} from "react";
 import style from './resultTemp.module.css'
 import {FaStar, FaStarHalfAlt} from 'react-icons/fa'
 import { Link } from "react-router-dom";
-import LoadingIcons from "react-loading-icons";
 
 
 export default function Result(props) {
-    let items;
-    if (props.Image) {
-        items = props.Image[0]
-    }
+
     const cont = []
     for (let i = 0; i < props.Image.length; i++) {
         cont.push(props.Image[i])
@@ -35,12 +31,13 @@ export default function Result(props) {
     
     return (
         <div>
+            
             {resultProd.map((obj, index) => {
             return (
                 <div key={index} className={style["aligner"]}>
                     <Link to={{ pathname:'/products', state: {obj}}}>
                     <div className={style["prod-left"]}>
-                        <img className={style["image-opts"]}src={obj.image}></img>
+                        <img className={style["image-opts"]}src={obj.image} alt="product"></img>
                     </div>
                     </Link>
                     <div className={style["prod-right"]}>

@@ -16,6 +16,8 @@ export default function Basket() {
     // makes a new Tab for each item inside the localstorage
     let data = localStorage.getItem("basket")
     data = JSON.parse(data)
+
+
     let conv_data = JSON.parse(localStorage.getItem("basket"))
     let make_order;
     let user = useAuth();
@@ -34,8 +36,7 @@ export default function Basket() {
     }
     let totalPrice = []
     if (data) {
-        console.log(data)
-        console.log(data.length)
+
         for (let i = 0; i < data.length; i++) {
             
             var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct 
@@ -72,6 +73,7 @@ export default function Basket() {
 
     let bask;
 
+    
     useEffect(() => {
         if (emptyBasket) {
             bask = (

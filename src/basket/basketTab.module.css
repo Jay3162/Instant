@@ -17,36 +17,32 @@
     position: absolute;
     left: 11.5%;
     top: 10.5%;
-    display: flex;
     font-size: 1.2vw;
+    margin-top: -1%;
 
 }
 
 .stock {
     position: absolute;
     left: 11.5%;
-    top: 75%;
-    
+    top: 80%;
     font-size: 0.7vw;
     color: green;
-    margin-top: 2em;
+    margin-top: 1.85%;
+
 }
 
 .price {
     position: absolute;
-
     font-size: 1.2vw;
-
-    left: 95.5%;
-
+    left: 95%;
     top: 10%;
+
 }
 
 .tab-row {
     position: absolute;
-    /* top: -120px; */
     top: 50.5%;
-    /* left: 220px; */
     left: 11.5%;
     width: 25%;
     
@@ -59,34 +55,38 @@
     left: 11.5%;
     top: 32%;
     font-size: 0.8vw;
+    margin-top: -0.5%;
 }
 
 .row-el {
+    padding-top: 10%;
     padding-right: 10px;
     font-size: 0.8vw;
-    
-
-
-
 
 }
 .info-tab {
     max-height: 25%;
     position: relative;
+    margin-top: 3vh;
+    top: 1vh;
     
 }
 
 .checkbox {
+
+    margin-left: 0%;
+    display: flex;
+    margin-top: -1vh;
     position: relative;
-    top: 4.5vh;
-    left: -3%;
-    transform: scale(1)
+    top: 2vh;
+    
+
 
 }
 
 .order-img {
     position: relative;
-    left: -1%;
+    left: 2%;
     max-height: 0.8%;
     max-width: 8%;
     min-height: 0.8%;
@@ -97,8 +97,8 @@
 }
 
 .total {
-    position: absolute;
-    left: 83.6%;
+    display: flex;
+    justify-content: flex-end;
     font-size: 1.2vw;
 }
 
@@ -112,3 +112,4 @@
 .quantity-btn:focus {
     border: 1 solid rgb(0, 195, 255);
 }
+
