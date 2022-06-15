@@ -37,6 +37,12 @@
     font-size: 1.2vw;
     left: 95%;
     top: 10%;
+    
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; */
+
+    
 
 }
 

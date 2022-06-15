@@ -128,6 +128,14 @@ export default function Basket() {
         )
 
     }
+    useEffect(() => {
+        if (localStorage.length < totalPrice.length) {
+            setTimeout(() => {
+
+            }, 1000)
+            return () => clearTimeout()
+        }
+    })
     
     return (
         <div>

@@ -25,6 +25,7 @@ export default function Tab () {
         data = JSON.parse(data)
 
         //adds each product to the container array if it's been added to the basket
+        console.log(data.length)
         for (i = 0; i < data.length; i++) {
             varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
             container.push(varProd)
@@ -35,15 +36,14 @@ export default function Tab () {
     useEffect(() => {
         setBaskCont(container)
     }, [])
-
-    const [cartPrice, setCartPrice] = useState(0)
     let count = 0
+    
+    
 
     // calculate the subtotal for the botton of the tab
     const CalcTotal = () => {
         for (let i = 0; i < container.length; i++) {
             count += container[i].price
-            console.log(count)
         }
         count = Number((count).toFixed(2))
     
@@ -58,48 +58,53 @@ export default function Tab () {
             count += "0"
             
         }
+        
         return count
-    }
-
-    
-    
-
-
-
-    
-
+    }    
+    const [cartPrice, setCartPrice] = useState(count)
     const deleteItem = (index) => {
+        console.log(basketProd)
         for (let i = 0; i < basketProd.length; i++) {
             if (basketProd[i] !== basketProd[index]) {
                 newBasket.push(basketProd[i])
             }
             
         }
+        console.log(newBasket)
+        console.log(localStorage.basket)
 
 
         for (let i = 0; i < basketProd.length; i++) {
             if (basketProd[i] === basketProd[index]) {
                 tempCount = basketProd[i].price
+                CalcTotal()
+                setCartPrice((prev) => Number(prev -= tempCount).toFixed(2))  
             }
         }
 
         setBasketProd(newBasket)
         if (newBasket.length <= 0) {
             localStorage.setItem("basket", JSON.stringify(newBasket));
+            
         }
         setBaskCont(newBasket);
+        // localStorage.setItem("basket", JSON.stringify(baskCont))
+        
 
     }
+
     // if (newBasket.length > container.length) {
     //     newBasket = JSON.stringify(newBasket)
     //     localStorage.setItem("basket", newBasket)
 
     // }
 
-
+    
     useEffect(() => {
+        
         CalcTotal()
         setCartPrice(count)
+
     }, [])
     return (
         <div>
@@ -118,7 +123,7 @@ export default function Tab () {
                                 <p className={style["price"]}><b>£{obj.price}</b></p>
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
-                                    <button className={style["quantity-btn"]}>Qty: 1<FaAngleDown/></button>
+                                    <button className={style["quantity-btn"]} onClick={() => console.log("clicked")}>Qty: 1<FaAngleDown/></button>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span>
                                     <span className={style["row-el"]} onClick={() => deleteItem(index)}><a>Delete</a></span>
