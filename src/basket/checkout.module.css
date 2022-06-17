@@ -1,0 +1,45 @@
+.total {
+    position: absolute;
+    /* left: 1470px; */
+    left: 101%;
+    background-color: white;
+    /* max-width: 350px; */
+    /* max-width: 35%; */
+    width: 14%;
+    /* top: 0px; */
+    top: 0%;
+    /* padding: 20px; */
+    padding: 2%;
+    /* height: 70px; */
+    height: 24%;
+    font-size: 1vw;
+
+}
+
+.checkout {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* padding: 5px 20px; */
+    padding: 1.5% 5.5%;
+    border-style: none;
+    background-color: yellow;
+    /* left: 0px; */
+    left: 12%;
+    /* width: 350px; */
+    width: 75%;
+    height: 22.5%;
+
+    /* top: 10px; */
+    top: 50%;
+    font-size: 0.8vw;
+    
+}
+
+.subtotal {
+    position: absolute;
+    top: 20%;
+
+}

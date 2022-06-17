@@ -6,17 +6,20 @@ import style from './basket.module.css'
 import Tab from './basketTab'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../firebase'
+import Checkout from './checkout'
 
 
 
 export default function Basket() {
     const [emptyBasket, setEmptyBasket] = useState(false)
+    
+    
 
     let row = [];
     // makes a new Tab for each item inside the localstorage
     let data = localStorage.getItem("basket")
     data = JSON.parse(data)
-
+    
 
     let conv_data = JSON.parse(localStorage.getItem("basket"))
     let make_order;
@@ -34,6 +37,7 @@ export default function Basket() {
         }
 
     }
+    let newItems = []
     let totalPrice = []
     if (data) {
 
@@ -43,7 +47,8 @@ export default function Basket() {
 
             if (varProd.price) {
                 totalPrice.push(varProd.price)
-            }   
+            }  
+            newItems.push(varProd) 
         }
 
     }
@@ -72,7 +77,7 @@ export default function Basket() {
     }
 
     let bask;
-
+    const [selectedItem, setSeletectedItem] = useState([totalPrice.length, count, newItems])
     
     useEffect(() => {
         if (emptyBasket) {
@@ -128,14 +133,6 @@ export default function Basket() {
         )
 
     }
-    useEffect(() => {
-        if (localStorage.length < totalPrice.length) {
-            setTimeout(() => {
-
-            }, 1000)
-            return () => clearTimeout()
-        }
-    })
     
     return (
         <div>
@@ -150,10 +147,10 @@ export default function Basket() {
                         <p className={style["price-title"]}>Price</p>
                     </div>
                     <hr></hr>
-                    <div><Tab /></div>
+                    <div><Tab setSeletectedItem={setSeletectedItem} /></div>
                     {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)}
                     
-                    {make_order}
+                    <Checkout selectedItem={selectedItem}/>
                 </div>
                 
             </div>

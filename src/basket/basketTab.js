@@ -3,7 +3,7 @@ import style from './basketTab.module.css'
 import {FaAngleDown} from 'react-icons/fa'
 
 
-export default function Tab () {
+export default function Tab ({setSeletectedItem}) {
     const [isChecked, setIsChecked] = useState(false)
     const [baskCont, setBaskCont] = useState([])
     
@@ -12,7 +12,7 @@ export default function Tab () {
     var varProd;
     let tempCount = 0;
     
-    const handleOnChange = (e) => {
+    const handleOnChange = () => {
         setIsChecked(!isChecked)
     }
     // retrieve data from localStorage and convert it from string
@@ -25,7 +25,6 @@ export default function Tab () {
         data = JSON.parse(data)
 
         //adds each product to the container array if it's been added to the basket
-        console.log(data.length)
         for (i = 0; i < data.length; i++) {
             varProd = data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data.fifthProduct || data[i].basketData.data.obj
             container.push(varProd)
@@ -90,6 +89,8 @@ export default function Tab () {
         setBaskCont(newBasket);
         // localStorage.setItem("basket", JSON.stringify(baskCont))
         
+        
+        
 
     }
 
@@ -98,6 +99,10 @@ export default function Tab () {
     //     localStorage.setItem("basket", newBasket)
 
     // }
+
+    useEffect(() => {
+        setSeletectedItem([baskCont.length, cartPrice, basketProd])
+    }, [baskCont, cartPrice])
 
     
     useEffect(() => {
@@ -112,7 +117,7 @@ export default function Tab () {
                 return (
                     <div className={style["info-tab"]} key={index}>
                         
-                        <div className={style["checkbox"]}><input type="checkbox" checked={isChecked} onChange={() => (handleOnChange)}/></div>
+                        <div className={style["checkbox"]}><input type="checkbox"  onChange={() => (handleOnChange)}/></div>
                         <div className={style["layers"]}>
                             <div key={obj.id}>
                                 

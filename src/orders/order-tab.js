@@ -7,12 +7,16 @@ export default function OrderTab (){
     const image = useLocation()
     let varProd;
     const container = []
+    let dataLoaded = false;
     if (image.state) {
+        dataLoaded = true;
         for (let i = 0; i < image.state.length; i++) {
-            varProd = image.state[i].basketData.data.obj || image.state[i].basketData.data.products || image.state[i].basketData.data.secondProduct || image.state[i].basketData.data.thirdProduct || image.state[i].basketData.data.fourthProduct || image.state[i].basketData.data.fifthProduct;
+            // image.state[i].basketData.data.obj || image.state[i].basketData.data.products || image.state[i].basketData.data.secondProduct || image.state[i].basketData.data.thirdProduct || image.state[i].basketData.data.fourthProduct || image.state[i].basketData.data.fifthProduct
+            varProd = image.state[i];
             container.push(varProd)
         }
     }
+
 
     const [orderInfo, setOrderInfo] = useState(container)
 
