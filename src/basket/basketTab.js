@@ -62,15 +62,12 @@ export default function Tab ({setSeletectedItem}) {
     }    
     const [cartPrice, setCartPrice] = useState(count)
     const deleteItem = (index) => {
-        console.log(basketProd)
         for (let i = 0; i < basketProd.length; i++) {
             if (basketProd[i] !== basketProd[index]) {
                 newBasket.push(basketProd[i])
             }
             
         }
-        console.log(newBasket)
-        console.log(localStorage.basket)
 
 
         for (let i = 0; i < basketProd.length; i++) {
@@ -128,7 +125,7 @@ export default function Tab ({setSeletectedItem}) {
                                 <p className={style["price"]}><b>£{obj.price}</b></p>
                                 <p className={style["styleName"]}><b>Style Name:</b> single</p>
                                 <div className={style["tab-row"]}>
-                                    <button className={style["quantity-btn"]} onClick={() => console.log("clicked")}>Qty: 1<FaAngleDown/></button>
+                                    <button className={style["quantity-btn"]} >Qty: 1<FaAngleDown/></button>
                                     <span className={style["row-el"]}><a>Save for later</a></span>
                                     <span className={style["row-el"]}><a>See more like this</a></span>
                                     <span className={style["row-el"]} onClick={() => deleteItem(index)}><a>Delete</a></span>
