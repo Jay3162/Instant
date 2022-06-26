@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 100vw;
     height: 100vh;
     
 }
 
 .top-links {
     position: relative;
-    left: -14.9vw;
+    margin-left: -18.9vw;
     
 }
 
@@ -34,7 +34,6 @@ a {
     position: relative;
     
 
-
 }
 
 .title {
@@ -52,13 +51,12 @@ a {
     margin-bottom: 20px;
     display: flex;
     
-    
 }
 
 .order-search {
     padding: 5px 3vw;
     margin-right: 10px;
-
+    
 }
 
 .order-search-btn {
@@ -84,6 +82,7 @@ a {
 .nav-sel {
     border-radius: 10px;
     padding: 2% 2%;
+    
 }
 
 li {
@@ -93,10 +92,10 @@ li {
 }
 
 .order-range {
-    padding: 2%;
+    /* padding: 2%; */
     display: flex;
-    width: 20vw;
-    
+    width: 80vw;
+    justify-content: center;
 }
 
 
@@ -115,7 +114,7 @@ li {
     padding-left: 1vw;
     height: 4vh;
     top: 1vh;
-
+    
 }
 
 .title-headers {
@@ -157,15 +156,12 @@ li {
     margin-right: 1vh;
     margin-left: 1vw;
     
-    
-
 }
 
 .old-order {
     position: relative;
     margin-left: 0.5vw;
     max-height: 15vh;
-    
     
 }
 
@@ -178,11 +174,8 @@ li {
     font-size: 1vw;
 }
 
-
-
 .prod-title {
     font-size: 1.5vh;
-
 }
 
 .order-img {
@@ -211,11 +204,9 @@ li {
     margin-right: 1vw;
     background-color: yellow;
     font-size: 1vh;
-    
 }
 
 .item-buy-btn {
-    
     padding: 0.8vh;
     border-radius: 10px;
     border-style: none;

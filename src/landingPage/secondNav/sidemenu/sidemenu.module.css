@@ -17,11 +17,17 @@ li {
     
 }
 
+@media (max-width: 800px) {
+    .dropdown {
+        display: none;
+    }
+}
+
 .dropdown svg {
     fill: white;
     display: flex;
-    justify-content: flex-start;
     margin-left: 1vw;
+    justify-content: flex-start;
     align-content: center;
     height: 2.5vh;
     width: 2.5vw;
