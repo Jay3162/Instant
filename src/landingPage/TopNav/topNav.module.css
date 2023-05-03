@@ -15,7 +15,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(19, 25, 33);
+    /* background-color: rgba(19, 25, 33); */
     height: 62px;
 
     
@@ -51,10 +51,14 @@
 .mySpan {
     margin-right: 1vw;
     align-items: center;
-    color: white;
+    color: black;
     font-weight: bold;
     display: flex;
     justify-content: space-around;
+}
+
+.mySpan a {
+    color: black;
 }
 
 .speechBox {
@@ -107,10 +111,10 @@
 
 .username {
     font-size: 0.9vw;
-    color: white;
+    color: black;
 }
 
 .basket {
-    color: white;
+    color: black;
 }
 

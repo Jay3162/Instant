@@ -59,78 +59,55 @@ function Product() {
     }
 
     return (
-        <div className={style["leveller"]}>
+        <div>
+            <div className={style["leveller"]}>
 
             <div>{varProd ? (<div><img className={style["img-col"]} src={varProd.image} alt="product image"></img></div>) : (<div></div>)}</div>
             <div className={style["middle-col"]}>
 
                 <div>{varProd ? (<p className={style["titleProps"]}>{varProd.title}</p>) : (<div></div>)}</div>
                 
-                <a className="store-link">Visit the Store</a>
                 <div className={style["reviews"]}>
                     <div className={style["stars"]}>{starCount} {varProd.rating.rate}</div>
                     <div className={style["review-num"]}>reviews {varProd.rating.count}</div>
                 </div>
-                <hr className={style["grey-line"]}></hr>
+                
 
                 <div>{varProd ? (<div className={style["prices"]}>£{realPrice}</div>) : (<div></div>)}</div>
+                <div className={style["action-btns"]}>
 
-                <div className={style["mini-description"]}>
+                    {varProd ? (<div><button onClick={double} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
+
+
+                    <button className={style["buy-btn"]}>Buy Now</button>
+                </div>
+
+
+
+            </div>
+
+            </div>
+            <div className={style["description-wrapper"]}>
+
+                <div className={style["description"]}>
+                    <div className={style["mini-description"]}>
 
                     <div>{varProd ? (<p><b>Description</b>: {varProd.category}</p>) : (<div></div>)}</div>
-                    
+
                     <p><b>Style</b>: Single</p>
 
-                </div>
-                <hr className={style["grey-line"]}></hr>
-                <div className={style["description"]}>
-                 <p><b>About this item</b></p>
-                 <ul>
+                    </div>
+                    <p><b>About this item</b></p>
+                    <ul>
 
-                     <div>{varProd ? (<li>{varProd.description}</li>) : (<div></div>)}</div>
-                     
-
-
-                 </ul>
-                
-             </div>
-
-         </div>
-         <div className={style["right-col"]}>
-             <div className={style["container-1"]}>
-
-                 <div>{varProd ? (<p><b>£{realPrice}</b></p>) : (<div></div>)}</div>
-                 
-                 <p >FREE delivery <b>Tomorrow, March 4.</b> Order within 5 hrs 55 mins. Details</p>
-                 <p >In stock</p>
-                 <p>Quantity: <datalist>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     </datalist></p>
-                 <div className={style["action-btns"]}>
-
-                     {varProd ? (<div><button onClick={double} className={style["basket-btn"]}>Add to Basket</button></div>) : (<div></div>)}
-                     
-
-                     <button className={style["buy-btn"]}>Buy Now</button>
-                 </div>
-                 <a>Secure transaction</a>
-                 <p>Dispatches from Instant</p>
-                 <p>Sold by Instant</p>
-                 <div className={style["insurance"]}>
-                     <p><b>Add Extra Protection?</b></p>
-                     <a>3-year product care for £9.49</a>
-                     <a>2-year product care for £6.39</a>
-
-                     <p>Add gift options</p>
+                        <div>{varProd ? (<li>{varProd.description}</li>) : (<div></div>)}</div>
                     
-                 </div>
-             </div>
-         </div>
-
+                    </ul>
+                
+                </div>
+            </div>
         </div>
+        
         
     )
 }
@@ -141,8 +118,8 @@ export default function ProductPage() {
     return (
         <div>
         <TopNav Image={Image}/>
-        <SearchBar />
-        <SecondNav />
+        {/* <SearchBar /> */}
+        {/* <SecondNav /> */}
         <Product />
         
         </div>

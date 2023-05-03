@@ -19,6 +19,7 @@ export default function Basket() {
     // makes a new Tab for each item inside the localstorage
     let data = localStorage.getItem("basket")
     data = JSON.parse(data)
+    console.log(data)
     
 
     let conv_data = JSON.parse(localStorage.getItem("basket"))
@@ -43,7 +44,7 @@ export default function Basket() {
 
         for (let i = 0; i < data.length; i++) {
             
-            var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct 
+            var varProd = data[i].basketData.data.obj || data[i].basketData.data.products || data[i].basketData.data.secondProduct || data[i].basketData.data.thirdProduct || data[i].basketData.data.fourthProduct || data[i].basketData.data 
 
             if (varProd.price) {
                 totalPrice.push(varProd.price)
@@ -137,8 +138,8 @@ export default function Basket() {
     return (
         <div>
             <TopNav />
-            <SearchBar />
-            <SecondNav />
+            {/* <SearchBar />
+            <SecondNav /> */}
    
             <div className={style["order-container"]}>
                 <div className={style["order-tab"]}>
@@ -146,9 +147,8 @@ export default function Basket() {
                         <p className={style["tab-title"]}>Shopping Basket</p>
                         <p className={style["price-title"]}>Price</p>
                     </div>
-                    <hr></hr>
                     <div><Tab setSeletectedItem={setSeletectedItem} /></div>
-                    {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)}
+                    {/* {data ? (<button type='submit' className={style["del-btn"]} onClick={Delete}>Delete</button>) : (<div></div>)} */}
                     
                     <Checkout selectedItem={selectedItem}/>
                 </div>

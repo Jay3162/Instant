@@ -7,7 +7,7 @@
     /* max-width: 35%; */
     width: 14%;
     /* top: 0px; */
-    top: 0%;
+    top: 10%;
     /* padding: 20px; */
     padding: 2%;
     /* height: 70px; */
@@ -25,13 +25,14 @@
     /* padding: 5px 20px; */
     padding: 1.5% 5.5%;
     border-style: none;
-    background-color: yellow;
+    background-color: aqua;
+    font-weight: 700;
     /* left: 0px; */
     left: 12%;
     /* width: 350px; */
     width: 75%;
     height: 22.5%;
-
+    transition: 300ms;
     /* top: 10px; */
     top: 50%;
     font-size: 0.8vw;
@@ -40,6 +41,26 @@
 
 .subtotal {
     position: absolute;
-    top: 20%;
+    top: 25%;
 
+}
+
+.checkout:after {
+    transform: skewX(15deg);
+    transition: 300ms;
+    background: rgb(63, 255, 255);
+}
+
+.checkout:hover::after {
+    width: 100%;
+    left: 0;
+    
+}
+
+.checkout:hover {
+    border: 2px solid transparent;
+    color: black;
+    transform: scale(1.05);
+    will-change: transform;
+    cursor: pointer;
 }

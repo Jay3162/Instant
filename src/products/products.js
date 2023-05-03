@@ -105,7 +105,7 @@ export default function Products(props) {
 
             {isLoaded ? (
                         <Link to={{pathname: '/products', state: {fourthProduct}}}><div className={style["square"]}>
-                        <div><p className={style["product-headers"]}>Sit</p></div>
+                        <div className={style["product-wrapper"]}><p className={style["product-headers"]}>Sit</p></div>
                         <img src={fourthProduct.image} alt="img1" className={style["prod-img"]} ></img>
                         <div className={style["prod-img"]}></div>
                         </div></Link>

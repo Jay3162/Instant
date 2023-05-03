@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import style from './topNav.module.css'
 import {Link} from 'react-router-dom'
 import { FaShoppingBag } from 'react-icons/fa'
+import { ImHome } from 'react-icons/im'
 import { logout, useAuth } from '../../firebase'
 import SearchBar from '../../searchBar/searchBar'
 
@@ -57,10 +58,10 @@ export default function TopNav() {
         <div className={style["nav-container"]}>
             <div className={style["nav-controls"]}>
                 <div className={style["nav-left"]}>
-                    <span className={style["mySpan"]}><Link to={'/'}><img className={style["logoImg"]} src={logoImg}/></Link></span>
+                    <span className={style["mySpan"]}><Link to={'/'}><ImHome/></Link></span>
 
                 </div>
-                <SearchBar/>
+                {/* <SearchBar/> */}
                 <div className={style["nav-right"]}>
                     <span className={style["mySpan"]}>
                     {account}
@@ -70,7 +71,7 @@ export default function TopNav() {
 
                     </span>
 
-                    <a href="/orders" className={style["mySpan"]}>orders</a>
+                    {/* <a href="/orders" className={style["mySpan"]}>orders</a> */}
                     {/* <FaShoppingBag className={style["basket-img"]}/> */}
                     <span className={style["mySpan"]}><Link to={'/basket'}><div className={style["basket"]}>basket</div></Link></span>
                 </div>

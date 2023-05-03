@@ -4,6 +4,7 @@ import SearchBar from '../searchBar/searchBar.js'
 import SecondNav from './secondNav/secondNav.js'
 import Products from '../products/products.js'
 import style from './landingPage.module.css'
+import Carousel from '../carousel/carousel.js'
 
 
 
@@ -17,10 +18,12 @@ export default function LandingPage() {
     return (
         <div className={style["container"]}>
             <TopNav/>
-            <SecondNav/>
+            {/* <SecondNav/> */}
             <div className={style["wrapper"]}>
-                <img className={style["promoImg"]} src={alexImg}></img>
-                <Products />
+                {/* <img className={style["promoImg"]} src={alexImg}></img> */}
+                {/* <Products /> */}
+
+                <Carousel/>
 
                 <Products />
 

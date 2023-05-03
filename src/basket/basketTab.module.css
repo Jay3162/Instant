@@ -65,10 +65,29 @@
 }
 
 .row-el {
-    padding-top: 10%;
-    padding-right: 10px;
     font-size: 0.8vw;
+    border: 1px solid aqua;
+    padding: 1vh 2vw;
+    border-radius: 10px;
+    transition: 500ms ease-in-out;
 
+}
+
+.row-el a {
+    color: aqua;
+}
+
+.row-el a:hover {
+    color: white;
+    transition: 500ms ease-in-out;
+}
+
+.row-el:hover {
+    box-shadow: inset 0 0 0 100px aqua;
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+    color: white;
+    
 }
 .info-tab {
     max-height: 25%;
