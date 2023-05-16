@@ -75,7 +75,7 @@
 @media (max-width: 800px) {
     .squares-container {
         position: relative;
-        display: flex;
+        display: grid;
         flex-direction: row;
         top: 15vh;    
     }
@@ -97,7 +97,8 @@
     .prod-img {
         position: absolute;
         height: 15.2vh;
-        width: 9vw;
+        width: auto;
+        aspect-ratio: 1;
     
     }
 
@@ -111,7 +112,7 @@
 @media (max-width: 600px) {
     .squares-container {
         position: relative;
-        display: flex;
+        display: grid;
         flex-direction: row;
         top: 15vh;    
     }
@@ -142,7 +143,7 @@
 @media (max-width: 400px) {
     .squares-container {
         position: relative;
-        display: flex;
+        display: grid;
         flex-direction: row;
         top: 10vh;    
     }
