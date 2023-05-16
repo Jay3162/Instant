@@ -77,3 +77,36 @@
 .chev:hover {
     color: black;
 }
+
+@media screen and (max-width: 928px) {
+    .carousel {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+
+    .carousel .carousel-txt {
+        align-items: center;
+    }
+
+    .carousel img {
+        height: 40vh;
+        max-width: 50vw;
+        width: auto;
+    }
+
+    .carousel h2 {
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .carousel p {
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .carousel a {
+        font-size: 1.5vw;
+        width: 10vw;
+    }
+}
